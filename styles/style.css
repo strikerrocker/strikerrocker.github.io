@@ -22,7 +22,8 @@ main {
 
 h1,
 h2,
-h3 {
+h3,
+h6 {
     margin: 0;
     padding: 20px 0;
     color: #00539F;
@@ -35,6 +36,11 @@ h1.align-centre {
     color: #00539F;
     text-shadow: 1px 1px 1px black;
     text-align: center;
+}
+
+img.size16 {
+    width: 16px;
+    height: 16px;
 }
 
 
@@ -64,6 +70,3 @@ li.header a {
 li.header a:hover {
     background-color: #111;
 }
-
-
-/*Beatiful Links*/
