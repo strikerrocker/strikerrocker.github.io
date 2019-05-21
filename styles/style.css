@@ -1,5 +1,6 @@
 html {
     font-family: 'Open Sans', sans-serif;
+    background-color: #ffffff;
 }
 
 p,
@@ -7,10 +8,6 @@ li {
     font-size: 16px;
     line-height: 1;
     letter-spacing: 1px;
-}
-
-html {
-    background-color: #ffffff;
 }
 
 main {
@@ -23,20 +20,8 @@ main {
     border: 3px solid rgb(175, 175, 175);
 }
 
-h1 {
-    margin: 0;
-    padding: 20px 0;
-    color: #00539F;
-    text-shadow: 1px 1px 1px black;
-}
-
-h2 {
-    margin: 0;
-    padding: 20px 0;
-    color: #00539F;
-    text-shadow: 1px 1px 1px black;
-}
-
+h1,
+h2,
 h3 {
     margin: 0;
     padding: 20px 0;
@@ -44,9 +29,12 @@ h3 {
     text-shadow: 1px 1px 1px black;
 }
 
-img {
-    display: block;
-    margin: 0 auto;
+h1.align-centre {
+    margin: 0;
+    padding: 20px 0;
+    color: #00539F;
+    text-shadow: 1px 1px 1px black;
+    text-align: center;
 }
 
 
@@ -76,3 +64,6 @@ li.header a {
 li.header a:hover {
     background-color: #111;
 }
+
+
+/*Beatiful Links*/
