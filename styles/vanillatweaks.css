@@ -1,0 +1,80 @@
+body {
+    min-height: 1300px;
+}
+
+header {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 500px;
+    min-height: 500px;
+}
+
+header.splash {
+    background-image: url("../assets/vanillatweaks/home.png")
+}
+
+code {
+    color: #699c79;
+}
+
+a,
+a:hover,
+a:focus {
+    color: #37c562;
+}
+
+.card {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.card em {
+    color: #707070;
+}
+
+.card img {
+    width: 100%;
+}
+
+.card .text-region {
+    position: relative;
+}
+
+.card .text-region h4 {
+    padding-bottom: 10px;
+}
+
+.card .text-region p {
+    padding-top: 0;
+}
+
+.card .versions {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+
+.card .upcoming {
+    /* position: absolute; */
+    float: right;
+    color: white;
+    font-weight: normal;
+    right: 25px;
+    top: 25px;
+    font-size: 0.9em;
+    padding: 7px 10px;
+}
+
+.nav-pills .nav-link.upcoming {
+    color: #ffc000;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #37c562;
+}
+
+.nav-pills .nav-link.upcoming.active {
+    background-color: #ffc000;
+    color: white;
+}
