@@ -78,3 +78,9 @@ a:focus {
     background-color: #ffc000;
     color: white;
 }
+
+@media screen and (max-width:512px) {
+    #title {
+        font-size: 2rem;
+    }
+}
