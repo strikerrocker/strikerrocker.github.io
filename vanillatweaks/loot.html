@@ -53,102 +53,14 @@
     <!--Features-->
     <div class="container">
         <div class="row">
-            <div class="col-12">
-                <div class="card bg-light">
-                    <div class="card-body p-0">
-                        <div class="row no-gutters">
-                            <div class="image-region col-md-3">
-                                <!-- image -->
-                                <img src="" alt="Picture representing named mobs dropping nametags">
-                            </div>
-
-                            <div class="text-region col-md-9 p-4">
-                                <!-- title -->
-                                <a name="mob_nametag">
-                                    <h4>Named mobs drop their nametag when they die</h4>
-                                </a>
-
-                                <div class="description">
-                                    <p>
-                                        Named mobs will drop their name tags.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card bg-light">
-                    <div class="card-body p-0">
-                        <div class="row no-gutters">
-                            <div class="image-region col-md-3">
-                                <!-- image -->
-                                <img src="" alt="Picture representing bats drop leather">
-                            </div>
-
-                            <div class="text-region col-md-9 p-4">
-                                <!-- title -->
-                                <a name="bat_leather">
-                                    <h4>Named mobs drop their nametag when they die</h4>
-                                </a>
-
-                                <div class="description">
-                                    <p>
-                                        Bats drop leather when they die.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card bg-light">
-                    <div class="card-body p-0">
-                        <div class="row no-gutters">
-                            <div class="image-region col-md-3">
-                                <!-- image -->
-                                <img src="" alt="Picture representing enderman dropping their held block">
-                            </div>
-
-                            <div class="text-region col-md-9 p-4">
-                                <!-- title -->
-                                <a name="enderman_block">
-                                    <h4>Enderman drop their held blocks</h4>
-                                </a>
-
-                                <div class="description">
-                                    <p>
-                                        Endermen drop their held blocks.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card bg-light">
-                    <div class="card-body p-0">
-                        <div class="row no-gutters">
-                            <div class="image-region col-md-3">
-                                <!-- image -->
-                                <img src="" alt="Picture representing creepers dropping TNT">
-                            </div>
-
-                            <div class="text-region col-md-9 p-4">
-                                <!-- title -->
-                                <a name="bat_leather">
-                                    <h4>Creepers drop TNT</h4>
-                                </a>
-
-                                <div class="description">
-                                    <p>
-                                        Creepers have a 1/10 chance of dropping a TNT block.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-12" id="card-slot">
             </div>
         </div>
     </div>
+    <script type="text/javascript " src="../scripts/features.js "></script>
+    <script>
+        loadModule("loot")
+    </script>
 </body>
 
 </html>
