@@ -18,15 +18,14 @@ function fileExists(path) {
     http.open('HEAD', path, true);
     http.send();
     http.onreadystatechange = function() {
-        if (path) {
-            if (http.status == 200) {
-                console.log("Resource found for " + path)
-                return true;
-            } else {
-                console.log("Resource not found " + path)
-                return false;
-            }
-        } else { return false; }
+        if (http.readyState == 4 && http.status == 200) {
+            console.log("Resource found for " + path)
+            return true;
+        } else {
+            console.log("Resource not found " + path)
+            return false;
+        }
+
     }
 }
 
