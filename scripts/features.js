@@ -1,3 +1,5 @@
+var pictureFormats = [".png", ".gif"];
+
 function loadJSON(path, callback) {
 
     var xobj = new XMLHttpRequest();
@@ -8,11 +10,16 @@ function loadJSON(path, callback) {
 
             // .open will NOT return a value but simply returns undefined in async mode so use a callback
             callback(xobj.responseText);
-
         }
     }
     xobj.send(null);
+}
 
+function fileExists(path) {
+    var http = new XMLHttpRequest();
+    http.open('HEAD', path, true);
+    http.send();
+    return http.status != 404;
 }
 
 function loadModule(moduleName) {
@@ -61,11 +68,33 @@ function loadModule(moduleName) {
             //desc
             var descLine = document.createElement("P");
             descLine.innerHTML = desc;
+            //image region
+            var imageRegionAtt = document.createAttribute("class");
+            imageRegionAtt.value = "image-region col-md-3";
+            var imageRegion = document.createElement("DIV");
+            imageRegion.setAttributeNode(imageRegionAtt);
+            //image
+            var imageAltAtt = document.createAttribute("ALT");
+            imageAltAtt.value = "Picture representing " + name;
+            var picFormat;
+            for (x in pictureFormats) {
+                if (fileExists("../assets/vanillatweaks/" + moduleName + "/" + id + pictureFormats[x])) {
+                    picFormat = pictureFormats[x];
+                    break;
+                }
+            }
+            var imageSrcAtt = document.createAttribute("src");
+            imageSrcAtt.value = "../assets/vanillatweaks/" + moduleName + "/" + id + picFormat;
+            var image = document.createElement("IMG");
+            image.setAttributeNode(imageSrcAtt);
+            image.setAttributeNode(imageAltAtt);
 
             titleLink.appendChild(titleLine);
             descDiv.appendChild(descLine);
             textRegion.appendChild(titleLink);
             textRegion.appendChild(descDiv);
+            imageRegion.appendChild(image);
+            rowNoGutters.appendChild(imageRegion);
             rowNoGutters.appendChild(textRegion);
             cardBody.appendChild(rowNoGutters);
             cardLight.appendChild(cardBody);
