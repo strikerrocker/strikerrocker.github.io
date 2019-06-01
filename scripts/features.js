@@ -1,7 +1,6 @@
 var pictureFormats = [".png", ".gif"];
 
 function loadJSON(path, callback) {
-
     var xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
     xobj.open('GET', path, true);
@@ -16,17 +15,16 @@ function loadJSON(path, callback) {
 function fileExists(path) {
     var http = new XMLHttpRequest();
     http.open('HEAD', path, true);
-    http.send();
     http.onreadystatechange = function() {
-        if (http.readyState == 4 && http.status == 200) {
-            console.log("Resource found for " + path)
-            return true;
-        } else {
+        if (http.status == 404) {
             console.log("Resource not found " + path)
             return false;
+        } else {
+            console.log("Resource found for " + path)
+            return true;
         }
-
     }
+    http.send(null);
 }
 
 function loadModule(moduleName) {
@@ -90,10 +88,11 @@ function loadModule(moduleName) {
                     break;
                 }
             }
+            if (picFormat == null) picFormat = ".png";
             var imageSrcAtt = document.createAttribute("src");
             imageSrcAtt.value = "../assets/vanillatweaks/" + moduleName + "/" + id + picFormat;
             var image = document.createElement("IMG");
-            if (picFormat != null) image.setAttributeNode(imageSrcAtt);
+            image.setAttributeNode(imageSrcAtt);
             image.setAttributeNode(imageAltAtt);
 
             titleLink.appendChild(titleLine);
