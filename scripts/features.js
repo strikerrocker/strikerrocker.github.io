@@ -12,21 +12,6 @@ function loadJSON(path, callback) {
     xobj.send(null);
 }
 
-function fileExists(path) {
-    var http = new XMLHttpRequest();
-    http.open('HEAD', path, true);
-    http.onreadystatechange = function() {
-        if (http.status == 404) {
-            console.log("Resource not found " + path)
-            return false;
-        } else {
-            console.log("Resource found for " + path)
-            return true;
-        }
-    }
-    http.send(null);
-}
-
 function loadModule(moduleName) {
     loadJSON("features.json", function(response) {
         var json = JSON.parse(response);
@@ -35,7 +20,8 @@ function loadModule(moduleName) {
             var feature = module[i];
             var id = feature["id"];
             var name = feature["name"];
-            var desc = feature["description"];
+            var desc = feature["desc"];
+            var advDesc = feature["advDesc"];
             //card body
             var cardBodyAtt = document.createAttribute("class");
             cardBodyAtt.value = "card-body p-0";
@@ -73,22 +59,43 @@ function loadModule(moduleName) {
             //desc
             var descLine = document.createElement("P");
             descLine.innerHTML = desc;
+            //more desc link
+            var moreLinkDataAtt = document.createAttribute("data-toggle");
+            moreLinkDataAtt.value = "collapse";
+            var moreLinkHrefAtt = document.createAttribute("href");
+            moreLinkHrefAtt.value = "#more_" + id;
+            var moreLinkRoleAtt = document.createAttribute("role");
+            moreLinkRoleAtt.value = "button";
+            var moreLinkAriaExpandAtt = document.createAttribute("aria-expanded");
+            moreLinkAriaExpandAtt.value = "false";
+            var moreLinkAriaCtrlAtt = document.createAttribute("aria-controls");
+            moreLinkAriaCtrlAtt.value = "more_" + id;
+            var showMoreNode = document.createTextNode("Show more");
+            var moreDescLink = document.createElement("A");
+            moreDescLink.setAttributeNode(moreLinkDataAtt);
+            moreDescLink.setAttributeNode(moreLinkHrefAtt);
+            moreDescLink.setAttributeNode(moreLinkRoleAtt);
+            moreDescLink.setAttributeNode(moreLinkAriaExpandAtt);
+            moreDescLink.setAttributeNode(moreLinkAriaCtrlAtt);
+            moreDescLink.appendChild(showMoreNode);
+            //more desc div
+            var moreDivClassAtt = document.createAttribute("class");
+            moreDivClassAtt.value = "collapse";
+            var moreDivIdAtt = document.createAttribute("id");
+            moreDivIdAtt.value = "more_" + id;
+            var moreDescDiv = document.createElement("DIV");
+            moreDescDiv.setAttributeNode(moreDivClassAtt);
+            moreDescDiv.setAttributeNode(moreDivIdAtt);
+            moreDescDiv.innerHTML = advDesc;
             //image region
             var imageRegionAtt = document.createAttribute("class");
             imageRegionAtt.value = "image-region col-md-3";
             var imageRegion = document.createElement("DIV");
             imageRegion.setAttributeNode(imageRegionAtt);
             //image
-            var imageAltAtt = document.createAttribute("ALT");
+            var imageAltAtt = document.createAttribute("alt");
             imageAltAtt.value = "Picture representing " + name;
-            var picFormat;
-            for (x in pictureFormats) {
-                if (fileExists("../assets/vanillatweaks/" + moduleName + "/" + id + pictureFormats[x])) {
-                    picFormat = pictureFormats[x];
-                    break;
-                }
-            }
-            if (picFormat == null) picFormat = ".png";
+            var picFormat = feature["picFormat"] == null ? ".png" : feature["picFormat"];
             var imageSrcAtt = document.createAttribute("src");
             imageSrcAtt.value = "../assets/vanillatweaks/" + moduleName + "/" + id + picFormat;
             var image = document.createElement("IMG");
@@ -99,6 +106,10 @@ function loadModule(moduleName) {
             descDiv.appendChild(descLine);
             textRegion.appendChild(titleLink);
             textRegion.appendChild(descDiv);
+            if (advDesc != null) {
+                textRegion.appendChild(moreDescLink);
+                textRegion.appendChild(moreDescDiv);
+            }
             imageRegion.appendChild(image);
             rowNoGutters.appendChild(imageRegion);
             rowNoGutters.appendChild(textRegion);
