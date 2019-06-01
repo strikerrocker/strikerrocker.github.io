@@ -7,8 +7,6 @@ function loadJSON(path, callback) {
     xobj.open('GET', path, true);
     xobj.onreadystatechange = function() {
         if (xobj.readyState == 4 && xobj.status == "200") {
-
-            // .open will NOT return a value but simply returns undefined in async mode so use a callback
             callback(xobj.responseText);
         }
     }
@@ -19,12 +17,16 @@ function fileExists(path) {
     var http = new XMLHttpRequest();
     http.open('HEAD', path, true);
     http.send();
-    if (http.status == 404) {
-        console.log("Resource not found error.")
-        return false;
-    } else {
-        console.log("Resource found for " + path)
-        return true;
+    http.onreadystatechange = function() {
+        if (path) {
+            if (http.status == 200) {
+                console.log("Resource found for " + path)
+                return true;
+            } else {
+                console.log("Resource not found " + path)
+                return false;
+            }
+        } else { return false; }
     }
 }
 
@@ -92,9 +94,7 @@ function loadModule(moduleName) {
             var imageSrcAtt = document.createAttribute("src");
             imageSrcAtt.value = "../assets/vanillatweaks/" + moduleName + "/" + id + picFormat;
             var image = document.createElement("IMG");
-            if (picFormat != null) {
-                image.setAttributeNode(imageSrcAtt);
-            }
+            if (picFormat != null) image.setAttributeNode(imageSrcAtt);
             image.setAttributeNode(imageAltAtt);
 
             titleLink.appendChild(titleLine);
