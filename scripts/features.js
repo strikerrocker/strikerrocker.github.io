@@ -19,7 +19,13 @@ function fileExists(path) {
     var http = new XMLHttpRequest();
     http.open('HEAD', path, true);
     http.send();
-    return http.status != 404;
+    if (http.status == 404) {
+        console.log("Resource not found error.")
+        return false;
+    } else {
+        console.log("Resource found for " + path)
+        return true;
+    }
 }
 
 function loadModule(moduleName) {
@@ -86,7 +92,9 @@ function loadModule(moduleName) {
             var imageSrcAtt = document.createAttribute("src");
             imageSrcAtt.value = "../assets/vanillatweaks/" + moduleName + "/" + id + picFormat;
             var image = document.createElement("IMG");
-            image.setAttributeNode(imageSrcAtt);
+            if (picFormat != null) {
+                image.setAttributeNode(imageSrcAtt);
+            }
             image.setAttributeNode(imageAltAtt);
 
             titleLink.appendChild(titleLine);
