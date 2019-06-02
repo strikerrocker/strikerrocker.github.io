@@ -12,6 +12,13 @@ function loadJSON(path, callback) {
     xobj.send(null);
 }
 
+function removeImageRegion(image){
+    image.onerror=null;
+    var imageRegion=image.parentElement;
+    imageRegion.parentElement.removeChild(imageRegion);
+    console.log("Removed image region because image src="+image.getAttribute("src")+" was not found.")
+} 
+
 function loadModule(moduleName) {
     loadJSON("features.json", function(response) {
         var json = JSON.parse(response);
@@ -49,11 +56,12 @@ function loadModule(moduleName) {
             titleLink.setAttributeNode(titleLinkAtt);
             //title
             var titleNode = document.createTextNode(name);
-            var titleLine = document.createElement("H4");
+            var titleLine = document.createElement("H3");
             titleLine.appendChild(titleNode);
             //desc div
             var descDivAtt = document.createAttribute("name");
             descDivAtt.value = "description";
+            moreLinkAriaCtrlAtt.value = "more_" + id;
             var descDiv = document.createElement("DIV");
             descDiv.setAttributeNode(descDivAtt);
             //desc
@@ -69,7 +77,6 @@ function loadModule(moduleName) {
             var moreLinkAriaExpandAtt = document.createAttribute("aria-expanded");
             moreLinkAriaExpandAtt.value = "false";
             var moreLinkAriaCtrlAtt = document.createAttribute("aria-controls");
-            moreLinkAriaCtrlAtt.value = "more_" + id;
             var showMoreNode = document.createTextNode("Show more");
             var moreDescLink = document.createElement("A");
             moreDescLink.setAttributeNode(moreLinkDataAtt);
@@ -98,9 +105,15 @@ function loadModule(moduleName) {
             var picFormat = feature["picFormat"] == null ? ".png" : feature["picFormat"];
             var imageSrcAtt = document.createAttribute("src");
             imageSrcAtt.value = "../assets/vanillatweaks/" + moduleName + "/" + id + picFormat;
+            var imageErrorAtt = document.createAttribute("onerror");
+            imageErrorAtt.value = "removeImageRegion(this);";
+            var imageClassAtt = document.createAttribute("class");
+            imageClassAtt.value = "img-thumbnail m-sm-2";
             var image = document.createElement("IMG");
             image.setAttributeNode(imageSrcAtt);
             image.setAttributeNode(imageAltAtt);
+            image.setAttributeNode(imageErrorAtt);
+            image.setAttributeNode(imageClassAtt);
 
             titleLink.appendChild(titleLine);
             descDiv.appendChild(descLine);
