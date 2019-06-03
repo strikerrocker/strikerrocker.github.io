@@ -61,7 +61,6 @@ function loadModule(moduleName) {
             //desc div
             var descDivAtt = document.createAttribute("name");
             descDivAtt.value = "description";
-            moreLinkAriaCtrlAtt.value = "more_" + id;
             var descDiv = document.createElement("DIV");
             descDiv.setAttributeNode(descDivAtt);
             //desc
@@ -77,6 +76,7 @@ function loadModule(moduleName) {
             var moreLinkAriaExpandAtt = document.createAttribute("aria-expanded");
             moreLinkAriaExpandAtt.value = "false";
             var moreLinkAriaCtrlAtt = document.createAttribute("aria-controls");
+            moreLinkAriaCtrlAtt.value = "more_" + id;
             var showMoreNode = document.createTextNode("Show more");
             var moreDescLink = document.createElement("A");
             moreDescLink.setAttributeNode(moreLinkDataAtt);
