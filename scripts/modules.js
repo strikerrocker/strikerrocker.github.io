@@ -12,12 +12,21 @@ function loadJSON(path, callback) {
     xobj.send(null);
 }
 
-function removeImageRegion(image){
-    image.onerror=null;
-    var imageRegion=image.parentElement;
+function removeImageRegion(image) {
+    image.onerror = null;
+    var imageRegion = image.parentElement;
     imageRegion.parentElement.removeChild(imageRegion);
-    console.log("Removed image region because image src="+image.getAttribute("src")+" was not found.")
-} 
+    console.log("Removed image region because image src=" + image.getAttribute("src") + " was not found.")
+}
+
+function pause(video) {
+    video.pause();
+}
+
+function play(video) {
+    if (video.paused)
+        video.play();
+}
 
 function loadModule(moduleName) {
     loadJSON("features.json", function(response) {
@@ -99,21 +108,53 @@ function loadModule(moduleName) {
             imageRegionAtt.value = "image-region col-md-3";
             var imageRegion = document.createElement("DIV");
             imageRegion.setAttributeNode(imageRegionAtt);
-            //image
-            var imageAltAtt = document.createAttribute("alt");
-            imageAltAtt.value = "Picture representing " + name;
-            var picFormat = feature["picFormat"] == null ? ".png" : feature["picFormat"];
-            var imageSrcAtt = document.createAttribute("src");
-            imageSrcAtt.value = "../assets/vanillatweaks/" + moduleName + "/" + id + picFormat;
-            var imageErrorAtt = document.createAttribute("onerror");
-            imageErrorAtt.value = "removeImageRegion(this);";
-            var imageClassAtt = document.createAttribute("class");
-            imageClassAtt.value = "img-thumbnail m-sm-2";
-            var image = document.createElement("IMG");
-            image.setAttributeNode(imageSrcAtt);
-            image.setAttributeNode(imageAltAtt);
-            image.setAttributeNode(imageErrorAtt);
-            image.setAttributeNode(imageClassAtt);
+            //image/Video
+            var imageOrVideo
+            if (feature["video"] == null || feature["video"] == false) {
+                imageOrVideo = document.createElement("IMG");
+                var imageAltAtt = document.createAttribute("alt");
+                imageAltAtt.value = "Picture representing " + name;
+                var picFormat = feature["picFormat"] == null ? ".png" : feature["picFormat"];
+                var imageSrcAtt = document.createAttribute("src");
+                imageSrcAtt.value = "../assets/vanillatweaks/" + moduleName + "/" + id + picFormat;
+                var imageErrorAtt = document.createAttribute("onerror");
+                imageErrorAtt.value = "removeImageRegion(this);";
+                var imageClassAtt = document.createAttribute("class");
+                imageClassAtt.value = "img-thumbnail m-sm-2";
+                imageOrVideo.setAttributeNode(imageSrcAtt);
+                imageOrVideo.setAttributeNode(imageAltAtt);
+                imageOrVideo.setAttributeNode(imageErrorAtt);
+                imageOrVideo.setAttributeNode(imageClassAtt);
+            } else {
+                imageOrVideo = document.createElement("VIDEO");
+                var videoWidthAtt = document.createAttribute("width");
+                videoWidthAtt.value = 267;
+                var videoHeightAtt = document.createAttribute("height");
+                videoHeightAtt.value = 267;
+                var videoErrorAtt = document.createAttribute("onerror");
+                videoErrorAtt.value = "removeImageRegion(this);";
+                var videoMouseOverAtt = document.createAttribute("onmouseover");
+                videoMouseOverAtt.value = "play(this);";
+                var videoMouseOutAtt = document.createAttribute("onmouseout");
+                videoMouseOutAtt.value = "pause(this);";
+                // imageOrVideo.setAttributeNode(videoHeightAtt);
+                imageOrVideo.setAttributeNode(videoWidthAtt);
+                imageOrVideo.setAttributeNode(videoErrorAtt);
+                imageOrVideo.setAttributeNode(videoMouseOverAtt);
+                imageOrVideo.setAttributeNode(videoMouseOutAtt);
+
+                var videoSource = document.createElement("SOURCE");
+                var videoSrcAtt = document.createAttribute("src");
+                videoSrcAtt.value = "../assets/vanillatweaks/" + moduleName + "/" + id + ".webm";
+                var videoTypeAtt = document.createAttribute("TYPE");
+                videoTypeAtt.value = "video/webm";
+                videoSource.setAttributeNode(videoSrcAtt);
+                videoSource.setAttributeNode(videoTypeAtt);
+
+                var videoNotSupported = document.createTextNode("Your browser does not support HTML5 video.");
+                imageOrVideo.appendChild(videoNotSupported);
+                imageOrVideo.appendChild(videoSource);
+            }
 
             titleLink.appendChild(titleLine);
             descDiv.appendChild(descLine);
@@ -123,7 +164,7 @@ function loadModule(moduleName) {
                 textRegion.appendChild(moreDescLink);
                 textRegion.appendChild(moreDescDiv);
             }
-            imageRegion.appendChild(image);
+            imageRegion.appendChild(imageOrVideo);
             rowNoGutters.appendChild(imageRegion);
             rowNoGutters.appendChild(textRegion);
             cardBody.appendChild(rowNoGutters);
