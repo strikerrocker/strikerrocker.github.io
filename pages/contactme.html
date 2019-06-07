@@ -4,8 +4,7 @@
 <head>
     <title>Contacts</title>
     <meta charset="utf-8">
-    <link href="../styles/default.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+
     <!--Meta properties-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="Minecraft,Mods,VanillaTweaks,strikerrocker,Forge,Fabric, Mod Packs">
@@ -26,41 +25,64 @@
 
         gtag('config', 'UA-109233842-2');
     </script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <link href="../styles/default.css" rel="stylesheet" type="text/css">
 </head>
-<article>
-    <header>
-        <ul class="header">
-            <li class="header"><a href="../index.html">Home</a></li>
-            <li class="header"><a href="mods.html">My Mods</a></li>
-            <li class="header"><a href="../vanillatweaks/home.html">VanillaTweaks</a></li>
-            <li class="header"><a class="active">Contact</a></li>
-        </ul>
-    </header>
-</article>
 
 <body>
-    <main>
-        <h1>Where you can find me</h1>
-        <ul>
-            <li>
-                <img class="size16" alt="Twitter logo" src="../assets/Twitter_Logo_WhiteOnBlue.png">
-                <a href="https://www.twitter.com/strikerrocker" , style="color: lightseagreen">My Twitter</a>
-            </li>
-            <li>
-                <img class="size16" alt="Github mark" src="../assets/Discord-Logo-Color.png">
-                <a href="https://discord.gg/tqcqeSj" , style="color: lightseagreen">My Discord</a>
-            </li>
-            <li>
-                <img class="size16" alt="CurseForge logo" src="../assets/curse-vertical_lightbg.png">
-                <a href="https://minecraft.curseforge.com/members/strikerrocker" , style="color: lightseagreen">CurseForge</a>
-            </li>
-            <li>
-                <img class="size16" alt="Github mark" src="../assets/GitHub-Mark-32px.png">
-                <a href="https://www.github.com/strikerrocker" , style="color: lightseagreen">Github</a>
-
-            </li>
-        </ul>
-    </main>
+    <nav class="nav nav-pills nav-fill justify-content-center mb-5">
+        <a class="nav-link home" href="index.html">Home</a>
+        <a class="nav-link mods" href="mods.html">My Mods</a>
+        <a class="nav-link vanillatweaks" href="../vanillatweaks/home.html">VanillaTweaks</a>
+        <a class="nav-link contact active" href="contactme.html">Contact</a>
+    </nav>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="card-deck">
+                    <div class="card" style="width: 18rem;">
+                        <a href="https://www.twitter.com/strikerrocker">
+                            <img src="../assets/Twitter_Logo_WhiteOnBlue.png" class="card-img-top" alt="Twitter logo">
+                            <div class="card-body">
+                                <h5 class="card-title">My Twitter</h5>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <a href="https://discord.gg/tqcqeSj">
+                            <img src="../assets/Discord-Logo-Color.png" class="card-img-top" alt="Discord logo">
+                            <div class="card-body">
+                                <h5 class="card-title">My Discord</h5>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <a href="https://www.github.com/strikerrocker">
+                            <img src="../assets/GitHub-Mark-32px.png" class="card-img-top" alt="github logo">
+                            <div class="card-body">
+                                <h5 class="card-title">My Github</h5>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <a href="https://minecraft.curseforge.com/members/strikerrocker">
+                            <img src="../assets/curse-vertical_lightbg.png" class="card-img-top" alt="CurseForge logo">
+                            <div class="card-body">
+                                <h5 class="card-title">CurseForge</h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

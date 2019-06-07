@@ -4,8 +4,6 @@
 <head>
     <title>Home</title>
     <meta charset="utf-8">
-    <link href="styles/default.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
     <!--Meta properties-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="Minecraft,Mods,VanillaTweaks,strikerrocker,Forge,Fabric, Mod Packs">
@@ -26,37 +24,36 @@
 
         gtag('config', 'UA-109233842-2');
     </script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link href="styles/default.css" rel="stylesheet" type="text/css">
 </head>
-<article>
-    <header>
-        <ul class="header">
-            <li class="header"><a class="active">Home</a></li>
-            <li class="header"><a href="pages/mods.html">My Mods</a></li>
-            <li class="header"><a href="vanillatweaks/home.html">VanillaTweaks</a></li>
-            <li class="header"><a href="pages/contactme.html">Contact</a></li>
-        </ul>
-    </header>
-</article>
 
 <body>
-    <main>
-        <h1 class="align-centre">Welcome Random person on the internet!</h1>
-        <ul>
-            <li>I'm a young developer currently learning software development through indie game and addon development. Primarily focused on making mods for the game <a href="http://minecraft.net/">
-                Minecraft</a>. Some of which can be seen <a href="pages/mods.html">here </a></li>
-            <li>
-                I have made about 5-6 mods on my own and ported mods for other modder's.
-            </li>
-            <li>
-                The mod i am most proud of is <a href="https://minecraft.curseforge.com/projects/VanillaTweaks">VanillaTweaks</a> was initially a unofficial port of a mod called
-                <a href="https://minecraft.curseforge.com/projects/craft-by-anon10w1z">Craft++</a> and I started adding more into it.
-            </li>
-            <li>
-                I am learning/trying to make a 2D game for starters in java. Checkout how its coming along
-                <a href="http://github.com/strikerrocker/2D-game">here</a>
-            </li>
-        </ul>
-    </main>
+    <nav class="nav nav-pills nav-fill justify-content-center mb-5">
+        <a class="nav-link home active" href="index.html">Home</a>
+        <a class="nav-link mods" href="pages/mods.html">My Mods</a>
+        <a class="nav-link vanillatweaks" href="vanillatweaks/home.html">VanillaTweaks</a>
+        <a class="nav-link contact" href="pages/contactme.html">Contact</a>
+    </nav>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <p>I'm a young developer currently learning software development through indie game and addon development. Primarily focused on making mods for the game <a href="http://minecraft.net/">
+                    Minecraft</a>. Some of which can be seen <a href="pages/mods.html">here </a></p>
+                <p>I have made about 5-6 mods on my own and ported mods.</p>
+                <p>The mod i am most proud of is <a href="https://minecraft.curseforge.com/projects/VanillaTweaks">VanillaTweaks</a> was initially a unofficial port of a mod called
+                    <a href="https://minecraft.curseforge.com/projects/craft-by-anon10w1z">Craft++</a> and I started adding more into it.</p>
+                <p>I am learning/trying to make a 2D game for starters in java. Checkout how its coming along
+                    <a href="http://github.com/strikerrocker/2D-game">here</a></p>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

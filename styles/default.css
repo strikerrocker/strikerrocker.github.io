@@ -1,72 +1,10 @@
-html {
-    font-family: 'Open Sans', sans-serif;
-    background-color: #ffffff;
-}
+html {}
 
-p,
-li {
-    font-size: 16px;
-    line-height: 1;
-    letter-spacing: 1px;
-}
-
-main {
-    width: 85%;
-    margin: 0 auto;
-    margin-top: 60px;
-    background-color: rgb(255, 255, 255);
-    padding: 0px 20px 0 20px;
-    padding-top: auto;
-    border: 3px solid rgb(175, 175, 175);
-}
-
-h1,
-h2,
-h3,
-h6 {
-    margin: 0;
-    padding: 20px 0;
-    color: #00539F;
-    text-shadow: 1px 1px 1px black;
-}
-
-h1.align-centre {
-    margin: 0;
-    padding: 20px 0;
-    color: #00539F;
-    text-shadow: 1px 1px 1px black;
-    text-align: center;
+.nav {
+    padding-top: 30px;
 }
 
 img.size16 {
     width: 16px;
     height: 16px;
-}
-
-
-/*navbar css*/
-
-ul.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    background-color: #333;
-    overflow: hidden;
-}
-
-li.header a {
-    float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-li.header a:hover {
-    background-color: #111;
 }

@@ -4,8 +4,6 @@
 <head>
     <title>My Mods</title>
     <meta charset="utf-8">
-    <link href="../styles/default.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
     <!--Meta properties-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="Minecraft,Mods,VanillaTweaks,strikerrocker,Forge,Fabric, Mod Packs">
@@ -26,21 +24,52 @@
 
         gtag('config', 'UA-109233842-2');
     </script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <link href="../styles/default.css" rel="stylesheet" type="text/css">
 </head>
-<article>
-    <header>
-        <ul class="header">
-            <li class="header"><a href="../index.html">Home</a></li>
-            <li class="header"><a class="active">My Mods</a></li>
-            <li class="header"><a href="../vanillatweaks/home.html">VanillaTweaks</a></li>
-            <li class="header"><a href="contactme.html">Contact</a></li>
-        </ul>
-    </header>
-</article>
 
 <body>
+    <nav class="nav nav-pills nav-fill justify-content-center mb-5">
+        <a class="nav-link home" href="index.html">Home</a>
+        <a class="nav-link mods active" href="mods.html">My Mods</a>
+        <a class="nav-link vanillatweaks" href="../vanillatweaks/home.html">VanillaTweaks</a>
+        <a class="nav-link contact" href="contactme.html">Contact</a>
+    </nav>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>My Mods</h1>
+
+                <div>
+                    <h2>Mods for forge</h2>
+                    <div class="card-deck">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body element">
+                                <div class="element" api="https://api.cfwidget.com/minecraft/mc-mods/vanillatweaks">
+                                    <img class="element_img" src="" alt="">
+                                </div>
+
+                                <a href="https://minecraft.curseforge.com/projects/vanillatweaks">
+                                    <h5 class="card-title">VanillaTweaks</h5>
+                                </a>
+                                <p class="card-text">For available features click <a href="../vanillatweaks/home.html">here</a></p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
     <main>
-        <h1>My Mods</h1>
         <ul>
             <li>
                 <h2 style="color:lemonchiffon">Mods made for forge</h2>
@@ -85,6 +114,43 @@
             </li>
         </ul>
     </main>
+    <!--Script for pulling img from curse-->
+    <script>
+        Array.from(document.getElementsByClassName("element")).forEach(getDownloadsForElement);
+
+        function getDownloadsForElement(element, index, array) {
+            var id = element.id;
+            if (id != "") {
+                httpGetAsync(element, element.getAttribute("api"), fillInfoForResponse);
+            }
+        }
+
+        function httpGetAsync(element, theUrl, callback) {
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.onreadystatechange = function() {
+                if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+                    callback(element, xmlHttp.responseText);
+            }
+            xmlHttp.open("GET", theUrl, true);
+            xmlHttp.send(null);
+        }
+
+        function fillInfoForResponse(element, response) {
+            var downloads = document.querySelectorAll("div#" + element.id + " .element_downloads");
+            var title = document.querySelectorAll("div#" + element.id + " .element_text");
+            var link = document.querySelectorAll("div#" + element.id + " .element_link");
+            var img = document.querySelectorAll("div#" + element.id + " .element_img");
+            var obj = JSON.parse(response);
+            downloads[0].innerHTML = numberWithCommas(obj.downloads.total) + " Downloads";
+            title[0].innerHTML = obj.title;
+            link[0].setAttribute("href", obj.urls.curseforge);
+            img[0].setAttribute("src", obj.thumbnail.replace("120/120/", "").replace("thumbnails/", ""));
+        }
+
+        function numberWithCommas(x) {
+            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+    </script>
 </body>
 
 </html>
