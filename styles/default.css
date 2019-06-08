@@ -1,10 +1,19 @@
-html {}
-
-.nav {
-    padding-top: 30px;
+.element_text {
+    text-align: center;
 }
 
-img.size16 {
-    width: 16px;
-    height: 16px;
+.element_downloads {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+.element a {
+    text-decoration: none;
+}
+
+.nav-link {
+    font-size: 1.5rem;
 }
