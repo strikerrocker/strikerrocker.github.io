@@ -39,13 +39,15 @@ a:focus {
 
 @media (min-width: 768px) {
     .card img {
-      max-width: 300px; } }
+        max-width: 300px;
+    }
+}
 
 .card .text-region {
     position: relative;
 }
 
-3card .text-region h3 {
+.card .text-region h3 {
     margin-top: 10px;
     padding: 8px 0;
     font-size: 1.4em;
