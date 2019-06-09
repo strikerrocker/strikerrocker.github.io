@@ -17,3 +17,9 @@ h1 {
 .nav-link {
     font-size: 1.5rem;
 }
+
+@media screen and (max-width:640px) {
+    #title {
+        font-size: 3rem;
+    }
+}
