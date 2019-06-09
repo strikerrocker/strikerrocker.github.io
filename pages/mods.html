@@ -45,111 +45,116 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1>My Mods</h1>
-                <h2>Mods for forge</h2>
-                <div class="card-deck">
-                    <div class="card">
-                        <div class="card-body element" id="vanillatweaks" api="https://api.cfwidget.com/mc-mods/minecraft/vanillatweaks">
-                            <a class="element_link" href="">
-                                <img class="card-img-top element_img" src="" alt="No Connection to CF API">
+                <h1 id="title">My Mods</h1>
+                <h3>Mods for <strong>forge</strong></h3>
+                <div class="card-deck justify-content-center">
+                    <div class="card element" id="vanillatweaks" api="https://api.cfwidget.com/mc-mods/minecraft/vanillatweaks">
+                        <a class="element_link" href="">
+                            <img src="" class="card-img-top element_img" alt="No Connection to CF API">
+                            <div class="card-body">
                                 <h5 class="card-title element_text">?</h5>
                                 <div class="element_downloads card-text">? downloads</div>
-                            </a>
-                        </div>
+                            </div>
+                        </a>
                     </div>
 
-                    <div class="card">
-                        <div class="card-body element" id="tweakoni" api="https://api.cfwidget.com/minecraft/mc-mods/tweakoni">
-                            <a class="element_link" href="">
-                                <img class="card-img-top element_img" src="" alt="No Connection to CF API">
+                    <div class="card element
+                    " id="tweakoni" api="https://api.cfwidget.com/minecraft/mc-mods/tweakoni">
+                        <a class="element_link" href="">
+                            <img src="" class="card-img-top element_img" alt="No Connection to CF API">
+                            <div class="card-body">
                                 <h5 class="card-title element_text">?</h5>
                                 <div class="element_downloads card-text">? downloads</div>
-                            </a>
-                        </div>
+                            </div>
+                        </a>
                     </div>
 
-                    <div class="card">
-                        <div class="card-body element" id="sbm_jukebox" api="https://api.cfwidget.com/minecraft/mc-mods/sbm-jukebox">
-                            <a class="element_link" href="">
-                                <img class="card-img-top element_img" src="" alt="No Connection to CF API">
+                    <div class="card element" id="sbm_jukebox" api="https://api.cfwidget.com/minecraft/mc-mods/sbm-jukebox">
+                        <a class="element_link" href="">
+                            <img src="" class="card-img-top element_img" alt="No Connection to CF API">
+                            <div class="card-body">
+
                                 <h5 class="card-title element_text">?</h5>
                                 <div class="element_downloads card-text">? downloads</div>
-                            </a>
-                        </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
 
-                <h2>Mods for fabric</h2>
-                <div class="card-deck">
+                <h3>Mods for <strong>fabric</strong></h3>
+                <div class="card-deck justify-content-center">
 
-                    <div class="card">
-                        <div class="card-body element" id="clear-despawn-fabric" api="https://api.cfwidget.com/minecraft/mc-mods/clear-despawn-fabric">
-                            <a class="element_link" href="">
-                                <img class="card-img-top element_img" src="" alt="No Connection to CF API">
+                    <div class="card element" id="clear-despawn-fabric" api="https://api.cfwidget.com/minecraft/mc-mods/clear-despawn-fabric">
+                        <a class="element_link" href="">
+                            <img src="" class="card-img-top element_img" alt="No Connection to CF API">
+                            <div class="card-body">
                                 <h5 class="card-title element_text">?</h5>
                                 <div class="element_downloads card-text">? downloads</div>
-                            </a>
-                        </div>
+                            </div>
+                        </a>
                     </div>
 
-                    <div class="card">
-                        <div class="card-body element" id="furnace-xp-drop-fabric" api="https://api.cfwidget.com/minecraft/mc-mods/furnace-xp-drop-fabric">
-                            <a class="element_link" href="">
-                                <img class="card-img-top element_img" src="" alt="No Connection to CF API">
+                    <div class="card element" id="furnace-xp-drop-fabric" api="https://api.cfwidget.com/minecraft/mc-mods/furnace-xp-drop-fabric">
+                        <a class="element_link" href="">
+                            <img src="" class="card-img-top element_img" alt="No Connection to CF API">
+                            <div class="card-body">
                                 <h5 class="card-title element_text">?</h5>
                                 <div class="element_downloads card-text">? downloads</div>
-                            </a>
-                        </div>
+                            </div>
+                        </a>
                     </div>
 
-                    <div class="card">
-                        <div class="card-body element" id="craftingpad-fabric" api="https://api.cfwidget.com/minecraft/mc-mods/craftingpad-fabric">
-                            <a class="element_link" href="">
-                                <img class="card-img-top element_img" src="" alt="No Connection to CF API">
+                    <div class="card element" id="craftingpad-fabric" api="https://api.cfwidget.com/minecraft/mc-mods/craftingpad-fabric">
+                        <a class="element_link" href="">
+                            <img src="" class="card-img-top element_img" alt="No Connection to CF API">
+                            <div class="card-body">
                                 <h5 class="card-title element_text">?</h5>
                                 <div class="element_downloads card-text">? downloads</div>
-                            </a>
-                        </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-        <!--Script for pulling img from curse-->
-        <script>
-            Array.from(document.getElementsByClassName("element")).forEach(getDataForElement);
+    </div>
+    <!--Script for pulling img from curse-->
+    <script>
+        Array.from(document.getElementsByClassName("element")).forEach(getDataForElement);
 
-            function getDataForElement(element, index, array) {
-                var id = element.id;
-                if (id != "") {
-                    httpGetAsync(element, element.getAttribute("api"), fillInfoForResponse);
-                }
+        function getDataForElement(element, index, array) {
+            var id = element.id;
+            if (id != "") {
+                httpGetAsync(element, element.getAttribute("api"), fillInfoForResponse);
             }
+        }
 
-            function httpGetAsync(element, theUrl, callback) {
-                var xmlHttp = new XMLHttpRequest();
-                xmlHttp.onreadystatechange = function() {
-                    if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
-                        callback(element, xmlHttp.responseText);
-                }
-                xmlHttp.open("GET", theUrl, true);
-                xmlHttp.send(null);
+        function httpGetAsync(element, theUrl, callback) {
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.onreadystatechange = function() {
+                if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+                    callback(element, xmlHttp.responseText);
             }
+            xmlHttp.open("GET", theUrl, true);
+            xmlHttp.send(null);
+        }
 
-            function fillInfoForResponse(element, response) {
-                console.log(response);
-                var downloads = document.querySelectorAll("div#" + element.id + " .element_downloads");
-                var title = document.querySelectorAll("div#" + element.id + " .element_text");
-                var link = document.querySelectorAll("div#" + element.id + " .element_link");
-                var img = document.querySelectorAll("div#" + element.id + " .element_img");
-                var obj = JSON.parse(response);
-                downloads[0].innerHTML = numberWithCommas(obj.downloads.total) + " Downloads";
-                title[0].innerHTML = obj.title;
-                link[0].setAttribute("href", obj.urls.curseforge);
-                img[0].setAttribute("src", obj.thumbnail.replace("120/120/", "").replace("thumbnails/", ""));
-            }
+        function fillInfoForResponse(element, response) {
+            console.log(response);
+            var downloads = document.querySelectorAll("div#" + element.id + " .element_downloads");
+            var title = document.querySelectorAll("div#" + element.id + " .element_text");
+            var link = document.querySelectorAll("div#" + element.id + " .element_link");
+            var img = document.querySelectorAll("div#" + element.id + " .element_img");
+            var obj = JSON.parse(response);
+            downloads[0].innerHTML = numberWithCommas(obj.downloads.total) + " Downloads";
+            title[0].innerHTML = obj.title;
+            link[0].setAttribute("href", obj.urls.curseforge);
+            img[0].setAttribute("src", obj.thumbnail.replace("120/120/", "").replace("thumbnails/", ""));
+        }
 
-            function numberWithCommas(x) {
-                return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-            }
-        </script>
-        </deckdy
+        function numberWithCommas(x) {
+            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+    </script>
+</body>
+
+</html>
