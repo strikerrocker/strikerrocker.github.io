@@ -88,10 +88,6 @@
         "name": "Bats drop leather",
         "desc": "Bats now drop leather when they die."
     }, {
-        "id": "enderman_block",
-        "name": "Enderman drop their held block",
-        "desc": "Enderman now drop their held block when they die."
-    }, {
         "id": "creeper_tnt",
         "name": "Creepers drop TNT",
         "desc": "Creepers now has one in ten chances to drop TNT when they die."
