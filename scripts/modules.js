@@ -1,4 +1,8 @@
-var pictureFormats = [".png", ".gif"];
+var homeHTML = "";
+
+function loadHomeString() {
+    homeHTML = document.getElementById("card-slot").innerHTML;
+}
 
 function loadJSON(path, callback) {
     var xobj = new XMLHttpRequest();
@@ -26,6 +30,29 @@ function pause(video) {
 function play(video) {
     if (video.paused)
         video.play();
+}
+
+function setupPill(element) {
+    document.getElementById("card-slot").innerHTML = null;
+    document.title = element.childNodes[0].nodeValue;
+    var c = element.parentElement.children;
+    var i;
+    for (i = 0; i < c.length; i++) {
+        if (c[i].classList.contains("active")) {
+            c[i].classList.remove("active");
+        }
+    }
+    if (!element.getAttribute("class").includes("active"))
+        element.setAttribute("class", element.getAttribute("class") + " active");
+    if (element.id == "home") {
+        document.getElementById("card-slot").innerHTML = homeHTML;
+    } else if (element.id == "upcoming") {
+        loadJSON("features.json", function(response) {
+            document.getElementById("card-slot").innerHTML = JSON.parse(response)["upcoming"];
+        });
+    } else {
+        loadModule(element.id);
+    }
 }
 
 function loadModule(moduleName) {
