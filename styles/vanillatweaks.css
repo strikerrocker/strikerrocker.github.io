@@ -76,12 +76,18 @@ a:focus {
     padding: 7px 10px;
 }
 
+.nav-pills a {
+    color: #37c562!important;
+    cursor: pointer;
+}
+
 .nav-pills .nav-link.upcoming {
     color: #ffc000;
 }
 
 .nav-pills .nav-link.active {
     background-color: #37c562;
+    color: white!important;
 }
 
 .nav-pills .nav-link.upcoming.active {
