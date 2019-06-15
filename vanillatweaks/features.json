@@ -154,5 +154,5 @@
         "name": "Dropped seeds/crops now plant themselves",
         "desc": "Seeds will plant themselves after a (randomly-determined) couple of seconds delay. Farms can now be more easily automated!"
     }],
-    "upcoming": "<div class=\"text-center\"><p>In the near future, i would like to release 2.0 of VanillaTweaks. <br> 2.0 for now is mainly aimed at making everything configurable regardless of type of feature be it big or small.</p></div>"
+    "upcoming": "<div class=\"text-center\"><p>In the near future, I would like to release rewrite of VanillaTweaks as 2.0. <br> The currently is aimed at making everything configurable regardless of type of feature be it big or small.</p></div>"
 }
