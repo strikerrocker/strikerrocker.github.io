@@ -39,83 +39,18 @@
     </nav>
     <div class="container">
         <div class="row">
-            <div class="col-12">
-                <h1 id="title">My Mods</h1>
-                <h3>Mods for <strong>forge</strong></h3>
-
-                <div class="card-deck justify-content-center">
-                    <div class="card element" id="vanillatweaks" api="https://api.cfwidget.com/mc-mods/minecraft/vanillatweaks">
-                        <a class="element_link" href="">
-                            <img src="" class="card-img-top element_img" alt="No Connection to CF API">
-                            <div class="card-body">
-                                <h5 class="card-title element_text">?</h5>
-                                <div class="element_downloads card-text">? downloads</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card element" id="tweakoni" api="https://api.cfwidget.com/minecraft/mc-mods/tweakoni">
-                        <a class="element_link" href="">
-                            <img src="" class="card-img-top element_img" alt="No Connection to CF API">
-                            <div class="card-body">
-                                <h5 class="card-title element_text">?</h5>
-                                <div class="element_downloads card-text">? downloads</div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="card element" id="sbm_jukebox" api="https://api.cfwidget.com/minecraft/mc-mods/sbm-jukebox">
-                        <a class="element_link" href="">
-                            <img src="" class="card-img-top element_img" alt="No Connection to CF API">
-                            <div class="card-body">
-
-                                <h5 class="card-title element_text">?</h5>
-                                <div class="element_downloads card-text">? downloads</div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <h3>Mods for <strong>fabric</strong></h3>
-                <div class="card-deck justify-content-center">
-
-                    <div class="card element" id="clear-despawn-fabric" api="https://api.cfwidget.com/minecraft/mc-mods/clear-despawn-fabric">
-                        <a class="element_link" href="">
-                            <img src="" class="card-img-top element_img" alt="No Connection to CF API">
-                            <div class="card-body">
-                                <h5 class="card-title element_text">?</h5>
-                                <div class="element_downloads card-text">? downloads</div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="card element" id="furnace-xp-drop-fabric" api="https://api.cfwidget.com/minecraft/mc-mods/furnace-xp-drop-fabric">
-                        <a class="element_link" href="">
-                            <img src="" class="card-img-top element_img" alt="No Connection to CF API">
-                            <div class="card-body">
-                                <h5 class="card-title element_text">?</h5>
-                                <div class="element_downloads card-text">? downloads</div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="card element" id="craftingpad-fabric" api="https://api.cfwidget.com/minecraft/mc-mods/craftingpad-fabric">
-                        <a class="element_link" href="">
-                            <img src="" class="card-img-top element_img" alt="No Connection to CF API">
-                            <div class="card-body">
-                                <h5 class="card-title element_text">?</h5>
-                                <div class="element_downloads card-text">? downloads</div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+            <div class="col-12" id="card-slot">
             </div>
         </div>
     </div>
     <!--Script for pulling img from curse-->
-    <script src="../scripts/curseData.js"></script>
+    <script src="../scripts/mods.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script>
+        setupMods();
+    </script>
 </body>
 
 </html>
