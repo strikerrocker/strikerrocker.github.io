@@ -1,0 +1,23 @@
+{
+    "forge": [{
+        "id": "vanillatweaks",
+        "api": "https://api.cfwidget.com/mc-mods/minecraft/vanillatweaks"
+    }, {
+        "id": "tweakoni",
+        "api": "https://api.cfwidget.com/minecraft/mc-mods/tweakoni"
+    }, {
+        "id": "sbm_jukebox",
+        "api": "https://api.cfwidget.com/minecraft/mc-mods/sbm-jukebox"
+    }],
+
+    "fabric": [{
+        "id": "clear-despawn-fabric",
+        "api": "https://api.cfwidget.com/minecraft/mc-mods/clear-despawn-fabric"
+    }, {
+        "id": "furnace-xp-drop-fabric",
+        "api": "https://api.cfwidget.com/minecraft/mc-mods/furnace-xp-drop-fabric"
+    }, {
+        "id": "craftingpad-fabric",
+        "api": "https://api.cfwidget.com/minecraft/mc-mods/craftingpad-fabric"
+    }]
+}
