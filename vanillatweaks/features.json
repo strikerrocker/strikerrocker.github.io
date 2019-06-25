@@ -14,8 +14,7 @@
             "id": "binoculars",
             "name": "Binoculars",
             "desc": "A non-OP way to zoom! The amount of zoom is configurable.",
-            "advDesc": "Adds a new item which can be equipped in helmet slot and when equipped let's you zoom."
-
+            "advDesc": "Adds a new item which can be equipped in helmet slot and when equipped let's you zoom. <br> Has a baubles version when baubles is installed."
         },
         {
             "id": "slime_finder",
