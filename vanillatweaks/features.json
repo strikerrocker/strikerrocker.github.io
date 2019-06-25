@@ -1,5 +1,5 @@
 {
-    "crafting": [{
+    "content": [{
             "id": "dynamite",
             "name": "Dynamite",
             "desc": "Simple throwable TNT!",
@@ -41,6 +41,12 @@
             "advDesc": "Right click with a item to add & remove it to the pedestal. <br> Shift right click the pedestal to open its GUI."
         },
         {
+            "id": "crafting_pad",
+            "name": "Portable crafting table!",
+            "desc": "Adds a new item which can right clicked to open a 3x3 crafting menu."
+        }
+    ],
+    "crafting": [{
             "id": "better_stairs_recipes",
             "name": "Better stairs recipes",
             "desc": "Changes the recipe's for all stair to be more <strong>consistent</strong>."
@@ -54,6 +60,21 @@
             "id": "better_chests_recipes",
             "name": "Better chests recipes",
             "desc": "Adds a <strong>new</strong> recipe which allows chest to be crafted in bulk using logs."
+        },
+        {
+            "id": "nametag_recipe",
+            "name": "Recipe for nametag",
+            "desc": "Adds a recipe for nametag's using paper and iron."
+        },
+        {
+            "id": "packed_ice_recipe",
+            "name": "Recipe for Packed Ice",
+            "desc": "Adds a recipe for making packed ice using ice."
+        },
+        {
+            "id": "wool_to_string_recipe",
+            "name": "Recipe for crafting wool to string",
+            "desc": "Adds in recipe to convert wool to string."
         }
     ],
     "enchanting": [{
@@ -78,6 +99,11 @@
         "name": "Siphon",
         "desc": "This enchantment goes on your pickaxe. All mined block drops instantly go into your inventory!",
         "advDesc": "You won't have to deal with a pesky zombie or friend stealing your freshly-mined diamonds again!<br>It is friendly with Silk Touch or Blazing."
+    }, {
+        "id": "homing",
+        "name": "Homing",
+        "desc": "This enchantment goes on your bow. Your arrows will aim right at your target.",
+        "advDesc": "Level 1 works for entities 32 blocks away, level 2 works for entities 64 blocks away, and level 3 128 blocks away."
     }],
     "loot": [{
         "id": "mob_nametag",
@@ -97,9 +123,21 @@
         "name": "Sit on stairs and slabs",
         "desc": "Right click a slab or stair to sit on it!"
     }, {
+        "id": "hostile_burn_in_daylight",
+        "name": "Baby Zombies and Creepers burn in daylight.",
+        "desc": ""
+    }, {
+        "id": "disable_potion_shift",
+        "name": "No more GUI shifting due to potion effects",
+        "desc": "Disables GUI shifting when having potion effects."
+    }, {
         "id": "sign_editing",
         "name": "Sign Editing",
         "desc": "You can now right-click already placed signs to edit them. <br> Shift + right - clicking already placed signs clears them."
+    }, {
+        "id": "armor_stand_swapping",
+        "name": "Swap armor with armor stand",
+        "desc": "Right click to swap armor in armour stand."
     }, {
         "id": "silk_spawners",
         "name": "Mobs Spawners can now be silk touched",
@@ -110,7 +148,7 @@
         "desc": "Command blocks can be found in the redstone creative tab.<br> Dragon eggs can be found in the decorations tab."
     }, {
         "id": "renamed_buttons",
-        "name": "Buttons are now named according to their material",
+        "name": "Buttons are now named according to their material.",
         "desc": ""
     }, {
         "id": "higher_roman_no",
@@ -123,7 +161,7 @@
         "video": true
     }, {
         "id": "tnt_lava",
-        "name": "TNT placed next to lava will ignite itelf",
+        "name": "TNT placed next to lava will ignite itelf.",
         "desc": "",
         "video": true
     }, {
@@ -136,6 +174,18 @@
         "name": "Squishy Sponges",
         "desc": "Wet sponges on being squished set adjacent block as water if it's air.",
         "video": true
+    }, {
+        "id": "shift_itemframe_reverse",
+        "name": "Rotate item frame anti-clockwise!",
+        "desc": "Shift click on an item frame to rotate it anti-clockwise."
+    }, {
+        "id": "unlock_all_recipes",
+        "name": "Unlocks all recipes",
+        "desc": "Grants you access to all recipes in recipe book."
+    }, {
+        "id": "shear_nametag",
+        "name": "Shear nametag of named mobs",
+        "desc": "Use an shear on named entity to remove its name and drop a nametag."
     }, {
         "id": "sponge_nether_dry",
         "name": "Sponges dry in nether",
@@ -153,6 +203,5 @@
         "id": "auto_seed_planting",
         "name": "Dropped seeds/crops now plant themselves",
         "desc": "Seeds will plant themselves after a (randomly-determined) couple of seconds delay. Farms can now be more easily automated!"
-    }],
-    "upcoming": "<div class=\"text-center\"><p>In the near future, I would like to release rewrite of VanillaTweaks as 2.0. <br> The currently is aimed at making everything configurable regardless of type of feature be it big or small.</p></div>"
+    }]
 }
