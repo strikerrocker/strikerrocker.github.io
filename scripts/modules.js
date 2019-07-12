@@ -75,12 +75,12 @@ function loadModule(moduleName) {
                 '<div class="image-region col-md-3">' +
                 ((feature["video"] == null || feature["video"] == false) ?
                     '<img src="../assets/vanillatweaks/' + moduleName + '/' + id + '.png' + '" alt="Picture representing ' + name + '" onerror="removeImageRegion(this);" class="img-thumbnail m-sm-2">' :
-                    '<video onerror="removeImageRegion(this);" onmouseover="play(this);" onmouseout="pause(this);" width="267">Your browser does not support HTML5 video.<source src="../assets/vanillatweaks/' + moduleName + '/' + id + '.webm" type="video/webm"></video>'
+                    '<video onerror="removeImageRegion(this);" loop="" onmouseover="play(this);" onmouseout="pause(this);" width="267">Your browser does not support HTML5 video.<source src="../assets/vanillatweaks/' + moduleName + '/' + id + '.webm" type="video/webm"></video>'
                 ) +
                 '</div>' +
                 //Text region
                 '<div class="text-region col-md-9 p-4">' +
-                '<a name="+' + id + '"><h3>' + name + '</h3></a><div name="description"><p>' + desc + '</p></div>' +
+                '<a name="' + id + '"><h3>' + name + '</h3></a><div name="description"><p>' + desc + '</p></div>' +
                 (advDesc != null ?
                     '<a data-toggle="collapse" href="#more_' + id + '" role="button" aria-expanded="true" aria-controls="more_' + id + '" class="">Show more</a>' +
                     '<div class="collapse" id="more_' + id + '">' + advDesc + '</div>' :
