@@ -132,7 +132,8 @@
     }, {
         "id": "sign_editing",
         "name": "Sign Editing",
-        "desc": "You can now right-click already placed signs to edit them. <br> Shift + right - clicking already placed signs clears them."
+        "desc": "You can now right-click already placed signs to edit them. <br> Shift + right - clicking already placed signs clears them.",
+        "video": true
     }, {
         "id": "armor_stand_swapping",
         "name": "Swap armor with armor stand",
@@ -184,7 +185,8 @@
     }, {
         "id": "shear_nametag",
         "name": "Shear nametag of named mobs",
-        "desc": "Use an shear on named entity to remove its name and drop a nametag."
+        "desc": "Use an shear on named entity to remove its name and drop a nametag.",
+        "video": true
     }, {
         "id": "sponge_nether_dry",
         "name": "Sponges dry in nether",
