@@ -65,7 +65,12 @@ function loadModule(moduleName) {
             var name = feature["name"];
             var desc = feature["desc"];
             var advDesc = feature["advDesc"];
-
+            var versionString = "<h6>Supported Versions : ";
+            var versions = feature["versions"];
+            for (j in versions) {
+                versionString = versionString + "<span class='badge badge-primary'>" + versions[j] + "</span>&ensp;";
+            }
+            versionString = versionString + "</h6>";
 
             var cardSlot = document.getElementById("card-slot");
             cardSlot.innerHTML = cardSlot.innerHTML + '<div class="card bg-light">' +
@@ -84,8 +89,9 @@ function loadModule(moduleName) {
                 (advDesc != null ?
                     '<a data-toggle="collapse" href="#more_' + id + '" role="button" aria-expanded="true" aria-controls="more_' + id + '" class="">Show more</a>' +
                     '<div class="collapse" id="more_' + id + '">' + advDesc + '</div>' :
-                    '')
-            '</div>'
+                    '') + versionString +
+
+                '</div>'
             '</div></div></div>';
         }
     });
