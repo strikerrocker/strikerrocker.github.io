@@ -73,7 +73,7 @@ function loadModule(moduleName) {
             versionString = versionString + "</h6>";
 
             var cardSlot = document.getElementById("card-slot");
-            cardSlot.innerHTML = cardSlot.innerHTML + '<div class="card bg-light">' +
+            cardSlot.innerHTML = cardSlot.innerHTML + '<div class="card element bg-light">' +
                 '<div class = "card-body p-0" >' +
                 '<div class = "row no-gutters" > ' +
                 //Image region
