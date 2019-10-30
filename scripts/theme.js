@@ -38,16 +38,17 @@ function onCheckThemeBox(first, index, lightCSS, darkCSS) {
 
 function elementsTheme() {
     if (document.getElementById("themebox").checked) {
-        document.getElementById("twitter-widget-0").hidden = true;
-        document.getElementById("twitter-widget-1").hidden = false;
         document.getElementById("discord").src = "https://discordapp.com/widget?id=325065492899299328&theme=dark";
         document.getElementById("github").src = "assets/github_dark.png";
-        document.getElementById("twitter").src = "assets/twitter_dark.png";
+        document.getElementById("twitter").src = "assets/twitter_dark.png";         
+        document.getElementById("twitter-widget-0").hidden = true;
+        document.getElementById("twitter-widget-1").hidden = false;
+
     } else {
-        document.getElementById("twitter-widget-0").hidden = false;
-        document.getElementById("twitter-widget-1").hidden = true;
         document.getElementById("discord").src = "https://discordapp.com/widget?id=325065492899299328&theme=light";
         document.getElementById("github").src = "assets/github_light.png";
         document.getElementById("twitter").src = "assets/twitter_light.png";
+        document.getElementById("twitter-widget-0").hidden = false;
+        document.getElementById("twitter-widget-1").hidden = true;
     }
 }
