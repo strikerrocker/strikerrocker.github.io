@@ -1,0 +1,15 @@
+body {
+    background-color: #202122 !important;
+    color: white;
+}
+
+.badge {
+    color: #323232;
+    background-color: #37c562;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    color: #323232!important;
+    background-color: #37c562;
+}

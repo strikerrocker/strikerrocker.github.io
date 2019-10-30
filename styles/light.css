@@ -1,0 +1,16 @@
+.element {
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px #ebe8e8 solid;
+    -webkit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+}
+
+.element:hover {
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+    transform: scale(1.12);
+}
+
+.twitter-timeline {
+    border: 1px solid rgba(200, 200, 200, .5)!important;
+}
