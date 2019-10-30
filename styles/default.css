@@ -31,23 +31,6 @@
         height: auto;
     }
     
-    .twitter-timeline {
-        border: 2px solid rgba(200, 200, 200, .5)!important;
-    }
-    
-    .element {
-        margin: 10px;
-        border-radius: 5px;
-        border: 1px #ebe8e8 solid;
-        -webkit-transition-duration: 0.25s;
-        transition-duration: 0.25s;
-    }
-    
-    .element:hover {
-        box-shadow: inset 0 0 0 1000px rgba(200, 200, 200, .5);
-        transform: scale(1.12);
-    }
-    
     @media screen and (max-width:640px) {
         #title {
             font-size: 3rem;
@@ -61,4 +44,73 @@
             margin: 0;
             float: none;
         }
+    }
+    
+    .theme-switch-label {
+        float: left;
+        clear: none;
+        margin-top: 13px;
+        margin-right: 10px;
+        font-size: 0.7rem;
+    }
+    
+    .theme-switch {
+        float: left;
+        clear: none;
+        margin-top: 5px;
+        margin-right: 5px;
+        position: relative;
+        width: 60px;
+        height: 30px;
+    }
+    
+    .theme-switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+    
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 30px;
+        width: 30px;
+        bottom: 0px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+    
+    input:checked+.slider {
+        background-color: #2196F3;
+    }
+    
+    input:focus+.slider {
+        box-shadow: 0 0 1px #2196F3;
+    }
+    
+    input:checked+.slider:before {
+        -webkit-transform: translateX(30px);
+        -ms-transform: translateX(30px);
+        transform: translateX(30px);
+    }
+    
+    .slider.round {
+        border-radius: 34px;
+    }
+    
+    .slider.round:before {
+        border-radius: 50%;
     }
