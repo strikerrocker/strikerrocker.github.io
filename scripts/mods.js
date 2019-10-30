@@ -45,7 +45,7 @@ function numberWithCommas(x) {
 
 function setupMods() {
     var cardSlot = document.getElementById("card-slot");
-    cardSlot.innerHTML = '<h1 id="title">My Mods</h1>';
+    cardSlot.innerHTML = cardSlot.innerHTML + '<h1 id="title">My Mods</h1>';
     loadJSON("mods.json", function(response) {
         var json = JSON.parse(response);
         var modloader = ["forge", "fabric"];

@@ -27,8 +27,11 @@
     </script>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="../styles/vanillatweaks.css" rel="stylesheet" type="text/css">
+    <link href="../styles/vanillatweaks/vanillatweaks.css" rel="stylesheet" type="text/css">
+    <link href="../styles/vanillatweaks/light.css" rel="stylesheet" type="text/css">
+    <link href="../styles/default.css" rel="stylesheet" type="text/css">
     <script src="../scripts/modules.js"></script>
+    <script src="../scripts/theme.js"></script>
 </head>
 
 <body>
@@ -48,6 +51,11 @@
         <a class="nav-link" id="loot" onclick="setupPill(this)">Loot</a>
         <a class="nav-link" id="world" onclick="setupPill(this)">World</a>
         <a class="nav-link" id="tweaks" onclick="setupPill(this)">Tweaks</a>
+        <p class="theme-switch-label">Dark Theme</p>
+        <label class="theme-switch">
+                        <input type="checkbox" id="themebox" onclick="onCheckThemeBox(false, false, '../styles/vanillatweaks/light.css', '../styles/vanillatweaks/dark.css')">
+                        <span class="slider round"></span>
+                    </label>
     </nav>
     <br>
     <br>
@@ -94,9 +102,13 @@
                     <li><a href="https://github.com/StrikerRockers-Mods/VanillaTweaks/">Source code on github</a></li>
                     <li><a href="../contactme.html">Contact</a></li>
                 </ul>
-                <br><br><br>
                 <script>
                     loadHomeString();
+                    if (document.cookie == "dark=true") {
+                        document.getElementById("themebox").checked = true;
+                        document.querySelector("link[href='../styles/vanillatweaks/light.css']").href = "../styles/vanillatweaks/dark.css";
+                    }
+                    onCheckThemeBox(true, false, '../styles/vanillatweaks/light.css', '../styles/vanillatweaks/dark.css')
                 </script>
             </div>
         </div>

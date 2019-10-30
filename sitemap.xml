@@ -31,12 +31,4 @@
   <priority>1</priority>
    <changefreq>monthly</changefreq>
 </url>
-<url>
-  <loc>https://strikerrocker.github.io/pages/contactme.html</loc>
-  <lastmod>2019-06-14T21:54:13+00:00</lastmod>
-  <priority>0.80</priority>
-   <changefreq>monthly</changefreq>
-</url>
-
-
 </urlset>

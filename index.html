@@ -26,6 +26,8 @@
     </script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="styles/default.css" rel="stylesheet" type="text/css">
+    <link href="styles/light.css" rel="stylesheet" type="text/css">
+    <script src="scripts/theme.js"></script>
 </head>
 
 <body>
@@ -41,9 +43,15 @@
         <div class="row">
             <div class="col-12">
                 <div class="rightbar" style="margin:10px;margin-left:0;width:20%;float:right;">
+                    <p class="theme-switch-label">Dark Theme</p>
+                    <label class="theme-switch">
+                        <input type="checkbox" id="themebox" onclick="onCheckThemeBox(false,true,'styles/light.css','styles/dark.css')">
+                        <span class="slider round"></span>
+                    </label>
                     <a class="twitter-timeline" data-width="300" data-height="317" data-theme="light" href="https://twitter.com/StrikerRocker?ref_src=twsrc%5Etfw">Tweets by StrikerRocker</a>
+                    <a class="twitter-timeline" data-width="300" data-height="317" data-theme="dark" href="https://twitter.com/StrikerRocker?ref_src=twsrc%5Etfw">Tweets by StrikerRocker</a>
                     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                    <iframe style="margin-top:10px;" src="https://discordapp.com/widget?id=325065492899299328&theme=light" width="100%" height="400" allowtransparency="true" frameborder="0"></iframe>
+                    <iframe id="discord" src="https://discordapp.com/widget?id=325065492899299328&theme=light" width="100%" height="400" allowtransparency="true" frameborder="0"></iframe>
                 </div>
                 <main>
                     <section>
@@ -75,7 +83,7 @@
                         <div class="card-deck justify-content-center">
                             <div class="card element">
                                 <a href="https://www.twitter.com/strikerrocker">
-                                    <img src="assets/Twitter_Logo_WhiteOnBlue.png" class="card-img-top contact" alt="Twitter logo">
+                                    <img id="twitter" src="assets/twitter_light.png" class="card-img-top contact" alt="Twitter logo">
                                     <div class="card-body">
                                         <p class="card-title">Twitter - strikerrocker</p>
                                     </div>
@@ -91,7 +99,7 @@
                             </div>
                             <div class="card element">
                                 <a href="https://www.github.com/strikerrocker">
-                                    <img src="assets/GitHub-Mark-32px.png" class="card-img-top contact contact" alt="github logo">
+                                    <img id="github" src="assets/github_light.png" class="card-img-top contact contact" alt="github logo">
                                     <div class="card-body">
                                         <p class="card-title">Github - strikerrocker</p>
                                     </div>
@@ -119,6 +127,13 @@
             </div>
         </div>
     </div>
+    <script>
+        if (document.cookie == "dark=true") {
+            document.getElementById("themebox").checked = true;
+            document.querySelector("link[href='styles/light.css']").href = "styles/dark.css";
+        }
+        onCheckThemeBox(true, true, 'styles/light.css', 'styles/dark.css')
+    </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

@@ -11,7 +11,7 @@ header {
 }
 
 header.splash {
-    background-image: url("../assets/vanillatweaks/home.png")
+    background-image: url("../../assets/vanillatweaks/home.png")
 }
 
 code {
@@ -35,6 +35,7 @@ a:focus {
 
 .card img {
     width: 100%;
+    height: auto;
 }
 
 @media (min-width: 768px) {
@@ -99,9 +100,4 @@ a:focus {
     #title {
         font-size: 3rem;
     }
-}
-
-.badge {
-    color: white;
-    background-color: #37c562;
 }

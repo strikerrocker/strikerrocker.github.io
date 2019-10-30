@@ -93,6 +93,7 @@ function loadModule(moduleName) {
 
                 '</div>'
             '</div></div></div>';
+            onCheckThemeBox(false, false, '../styles/vanillatweaks/light.css', '../styles/vanillatweaks/dark.css');
         }
     });
 }

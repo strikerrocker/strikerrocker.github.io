@@ -26,6 +26,8 @@
     </script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="../styles/default.css" rel="stylesheet" type="text/css">
+    <link href="../styles/light.css" rel="stylesheet" type="text/css">
+    <script src="../scripts/theme.js"></script>
 </head>
 
 <body>
@@ -39,6 +41,13 @@
     <div class="container">
         <div class="row">
             <div class="col-12" id="card-slot">
+                <div class="rightbar" style="margin:10px;margin-left:0;width:20%;float:right;">
+                    <p class="theme-switch-label">Dark Theme</p>
+                    <label class="theme-switch">
+                        <input type="checkbox" id="themebox" onclick="onCheckThemeBox(false,false,'../styles/light.css','../styles/dark.css')">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
             </div>
         </div>
     </div>
@@ -49,6 +58,13 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script>
         setupMods();
+    </script>
+    <script>
+        if (document.cookie == "dark=true") {
+            document.getElementById("themebox").checked = true;
+            document.querySelector("link[href='../styles/light.css']").href = "../styles/dark.css";
+        }
+        onCheckThemeBox(true, false, '../styles/light.css', '../styles/dark.css')
     </script>
 </body>
 
