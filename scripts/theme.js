@@ -9,7 +9,6 @@ function onCheckThemeBox(first, index, lightCSS, darkCSS) {
             document.querySelector('link[href="' + darkCSS + '"]').href = lightCSS;
         }
         document.cookie = "dark=false;";
-
     }
     if (index == true) {
         if (first == true) {
