@@ -2,3 +2,7 @@
     color: white;
     background-color: #37c562;
 }
+
+.slider:before {
+    background: white;
+}

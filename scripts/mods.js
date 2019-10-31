@@ -50,7 +50,7 @@ function setupMods() {
         var json = JSON.parse(response);
         var modloader = ["forge", "fabric"];
         for (i in modloader) {
-            cardSlot.innerHTML = cardSlot.innerHTML + '<h3>Mods for <strong>' + modloader[i] + '</strong></h3>';
+            cardSlot.innerHTML = cardSlot.innerHTML + '<h3><u>Mods for ' + modloader[i] + '</u></h3>';
             cardSlot.innerHTML = cardSlot.innerHTML + '<div class="card-deck justify-content-center" id="' + modloader[i] + '"></div>';
             var mods = json[modloader[i]];
             for (j in mods) {
