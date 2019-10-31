@@ -21,7 +21,6 @@
             dataLayer.push(arguments);
         }
         gtag('js', new Date());
-
         gtag('config', 'UA-109233842-2');
     </script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -32,7 +31,6 @@
 
 <body>
     <br>
-    <br>
     <nav class="nav nav-pills nav-fill justify-content-center mb-5">
         <a class="nav-link" href="../index.html">Home</a>
         <a class="nav-link active" href="mods.html">My Mods</a>
@@ -40,13 +38,16 @@
     </nav>
     <div class="container">
         <div class="row">
-            <div class="col-12" id="card-slot">
-                <div class="rightbar" style="margin:10px;margin-left:0;width:20%;float:right;">
-                    <p class="theme-switch-label">Dark Theme</p>
-                    <label class="theme-switch">
-                        <input type="checkbox" id="themebox" onclick="onCheckThemeBox(false,false,'../styles/light.css','../styles/dark.css')">
-                        <span class="slider round"></span>
-                    </label>
+            <div class="col-12">
+                <main id="card-slot">
+                </main>
+                <div class="theme-switch-div">
+                    <p class="theme-switch-label">Dark Theme
+                        <label class="theme-switch">
+                                    <input type="checkbox" id="themebox" onclick="onCheckThemeBox(false,false,'../styles/light.css','../styles/dark.css')">
+                                    <span class="slider round"></span>
+                                </label>
+                    </p>
                 </div>
             </div>
         </div>

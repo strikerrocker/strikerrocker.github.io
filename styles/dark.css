@@ -1,21 +1,21 @@
 body {
     background-color: #121212;
-    color: white!important;
+    color: white;
 }
 
-.element {
-    margin: 10px;
-    border-radius: 5px;
+.card {
     border: 1px #323232 solid;
-    -webkit-transition-duration: 0.25s;
-    transition-duration: 0.25s;
     background-color: #121212;
-    color: white!important;
+    color: white;
 }
 
-.element:hover {
+.card:hover {
     box-shadow: inset 0 0 0 1000px rgba(200, 200, 200, .5);
-    transform: scale(1.12);
+}
+
+.card-body {
+    color: white;
+    background-color: black;
 }
 
 .nav-pills .nav-link.active,
@@ -26,4 +26,8 @@ body {
 
 div .timeline-Tweet .timeline-Tweet--isRetweet .u-cf .js-tweetIdInfo .js-clickToOpenTarget {
     color: white!important;
+}
+
+.slider:before {
+    background: #343a40;
 }

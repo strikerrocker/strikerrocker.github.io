@@ -13,3 +13,15 @@ body {
     color: #323232!important;
     background-color: #37c562;
 }
+
+input:checked+.slider {
+    background-color: #37c562!important;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #37c562!important;
+}
+
+.slider:before {
+    background: #343a40 !important;
+}
