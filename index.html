@@ -32,22 +32,15 @@
 
 <body>
     <br>
-    <br>
     <nav class="nav nav-pills nav-fill justify-content-center mb-5">
         <a class="nav-link home active" href="index.html">Home</a>
         <a class="nav-link mods" href="pages/mods.html">My Mods</a>
         <a class="nav-link vanillatweaks" href="vanillatweaks/index.html">VanillaTweaks</a>
-        <p class="theme-switch-label">Dark Theme</p>
-                    <label class="theme-switch">
-                        <input type="checkbox" id="themebox" onclick="onCheckThemeBox(false,true,'styles/light.css','styles/dark.css')">
-                        <span class="slider round"></span>
-                    </label>
     </nav>
-    <br>
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="rightbar" style="margin:10px;margin-left:0;width:20%;float:right;">
+                <div class="rightbar">
                     <a class="twitter-timeline" data-width="300" data-height="317" data-theme="light" href="https://twitter.com/StrikerRocker?ref_src=twsrc%5Etfw">Tweets by StrikerRocker</a>
                     <a class="twitter-timeline" data-width="300" data-height="317" data-theme="dark" href="https://twitter.com/StrikerRocker?ref_src=twsrc%5Etfw">Tweets by StrikerRocker</a>
                     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -57,16 +50,16 @@
                     <section>
                         <h2>About StrikerRocker</h2>
                         <br>
-                        <p>I'm a young developer currently learning software development through indie game and addon development.
+                        <p>I'm a young developer currently learning software and web development through indie game and addon development.
                     </section>
-                    <hr>
+                    <!--<hr>
                     <section>
                         <h2>Commissions</h2>
                         <br>
                         <p>
                             I sometimes do modding commissions (this is highly dependent on the case) contact me if you're interested.
                         </p>
-                    </section>
+                    </section>-->
                     <hr>
                     <section>
                         <h2>Projects</h2>
@@ -81,7 +74,7 @@
                         <h2>Links</h2>
                         <br>
                         <div class="card-deck justify-content-center">
-                            <div class="card element">
+                            <div class="card">
                                 <a href="https://www.twitter.com/strikerrocker">
                                     <img id="twitter" src="assets/twitter_light.png" class="card-img-top contact" alt="Twitter logo">
                                     <div class="card-body">
@@ -89,7 +82,7 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="card element">
+                            <div class="card">
                                 <a href="https://discord.gg/tqcqeSj">
                                     <img src="assets/Discord-Logo-Color.png" class="card-img-top contact" alt="Discord logo">
                                     <div class="card-body">
@@ -97,7 +90,7 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="card element">
+                            <div class="card">
                                 <a href="https://www.github.com/strikerrocker">
                                     <img id="github" src="assets/github_light.png" class="card-img-top contact contact" alt="github logo">
                                     <div class="card-body">
@@ -105,7 +98,7 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="card element">
+                            <div class="card">
                                 <a href="https://www.curseforge.com/members/strikerrocker/projects">
                                     <img src="assets/curse-vertical_lightbg.png" class="card-img-top contact" alt="CurseForge logo">
                                     <div class="card-body">
@@ -113,7 +106,7 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="card element">
+                            <div class="card">
                                 <a href="https://www.twitch.tv/strikerrocker/">
                                     <img src="assets/twitch.png" class="card-img-top contact" alt="CurseForge logo">
                                     <div class="card-body">
@@ -124,6 +117,13 @@
                         </div>
                     </section>
                 </main>
+                <div class="theme-switch-div" style="align-content: flex-start;">
+                    <p class="theme-switch-label">Dark Theme<label class="theme-switch">
+                                <input type="checkbox" id="themebox" onclick="onCheckThemeBox(false,true,'styles/light.css','styles/dark.css')">
+                                            <span class="slider round"></span>
+                                        </label>
+                    </p>
+                </div>
             </div>
         </div>
     </div>

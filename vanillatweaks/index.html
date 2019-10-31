@@ -51,65 +51,69 @@
         <a class="nav-link" id="loot" onclick="setupPill(this)">Loot</a>
         <a class="nav-link" id="world" onclick="setupPill(this)">World</a>
         <a class="nav-link" id="tweaks" onclick="setupPill(this)">Tweaks</a>
-        <p class="theme-switch-label">Dark Theme</p>
-        <label class="theme-switch">
-                        <input type="checkbox" id="themebox" onclick="onCheckThemeBox(false, false, '../styles/vanillatweaks/light.css', '../styles/vanillatweaks/dark.css')">
-                        <span class="slider round"></span>
-                    </label>
     </nav>
     <br>
     <br>
     <div class="container">
         <div class="row">
-            <div class="col-12" id="card-slot">
-                <p>
-                    <strong>VanillaTweaks</strong> is a mod for Minecraft ported from <a href="https://minecraft.curseforge.com/projects/craft-by-anon10w1z">Craft++</a> mod. Many more feautures were added. This mod aims to enhance Minecraft without going
-                    overboard.
+            <div class="col-12">
+                <main id="card-slot">
+                    <p>
+                        <strong>VanillaTweaks</strong> is a mod for Minecraft ported from <a href="https://minecraft.curseforge.com/projects/craft-by-anon10w1z">Craft++</a> mod. Many more feautures were added. This mod aims to enhance Minecraft without
+                        going overboard.
 
-                </p>
-                <p>
-                    VanillaTweaks is extremely configurable. Everything from enabling and disabling enchantments to hoe as sickle can be configured straight from the config GUI, accessible from the mods menu or the game menu. It is advised to delete your config file every
-                    time you update Vanilla Tweaks, for the configuration options may have changed.
-                </p>
-                <p>
-                    I hope you enjoy playing this mod as much as I have enjoyed learning about modding and building it!
-                </p>
-                <p>
-                    <em>
+                    </p>
+                    <p>
+                        VanillaTweaks is extremely configurable. Everything from enabling and disabling enchantments to hoe as sickle can be configured straight from the config GUI, accessible from the mods menu or the game menu. It is advised to delete your config file every
+                        time you update Vanilla Tweaks, for the configuration options may have changed.
+                    </p>
+                    <p>
+                        I hope you enjoy playing this mod as much as I have enjoyed learning about modding and building it!
+                    </p>
+                    <p>
+                        <em>
                         -- StrikerRocker
                     </em>
-                </p>
-                <br>
-                <h3>How to install</h3>
-                <ol>
-                    <li>
-                        VanillaTweaks requires Minecraft 1.12 or 1.14 with forge. Download the forge install from <a href="http://files.minecraftforge.net/">here</a> and run it.
-                    </li>
-                    <li>
-                        Download the latest version of VanillaTweaks from curseforge.com and put the .jar file in your mods folder. This normally lives in the same folder as your resourcepacks folder.
-                    </li>
-                    <li>
-                        Run the game from your Minecraft launcher using your <strong>new Forge</strong> profile.
-                    </li>
-                </ol>
-                (There are tutorials on how to set up Forge <a href="https://minecraft.gamepedia.com/Mods/Installing_Forge_mods">here</a> and <a href="https://www.wikihow.com/Install-Minecraft-Forge">here</a> if you're stuck.)
-                <br><br><br>
-                <h3>Links</h3>
-                <ul>
-                    <li>
-                        <a href="https://minecraft.curseforge.com/projects/vanillatweaks">CurseForge</a>
-                    </li>
-                    <li><a href="https://github.com/StrikerRockers-Mods/VanillaTweaks/">Source code on github</a></li>
-                    <li><a href="../contactme.html">Contact</a></li>
-                </ul>
-                <script>
-                    loadHomeString();
-                    if (document.cookie == "dark=true") {
-                        document.getElementById("themebox").checked = true;
-                        document.querySelector("link[href='../styles/vanillatweaks/light.css']").href = "../styles/vanillatweaks/dark.css";
-                    }
-                    onCheckThemeBox(true, false, '../styles/vanillatweaks/light.css', '../styles/vanillatweaks/dark.css')
-                </script>
+                    </p>
+                    <br>
+                    <h3>How to install</h3>
+                    <ol>
+                        <li>
+                            VanillaTweaks requires Minecraft 1.12 or 1.14 with forge. Download the forge install from <a href="http://files.minecraftforge.net/">here</a> and run it.
+                        </li>
+                        <li>
+                            Download the latest version of VanillaTweaks from curseforge.com and put the .jar file in your mods folder. This normally lives in the same folder as your resourcepacks folder.
+                        </li>
+                        <li>
+                            Run the game from your Minecraft launcher using your <strong>new Forge</strong> profile.
+                        </li>
+                    </ol>
+                    (There are tutorials on how to set up Forge <a href="https://minecraft.gamepedia.com/Mods/Installing_Forge_mods">here</a> and <a href="https://www.wikihow.com/Install-Minecraft-Forge">here</a> if you're stuck.)
+                    <br><br><br>
+                    <h3>Links</h3>
+                    <ul>
+                        <li>
+                            <a href="https://minecraft.curseforge.com/projects/vanillatweaks">CurseForge</a>
+                        </li>
+                        <li><a href="https://github.com/StrikerRockers-Mods/VanillaTweaks/">Source code on github</a></li>
+                        <li><a href="../contactme.html">Contact</a></li>
+                    </ul>
+                    <script>
+                        loadHomeString();
+                        if (document.cookie == "dark=true") {
+                            document.getElementById("themebox").checked = true;
+                            document.querySelector("link[href='../styles/vanillatweaks/light.css']").href = "../styles/vanillatweaks/dark.css";
+                        }
+                        onCheckThemeBox(true, false, '../styles/vanillatweaks/light.css', '../styles/vanillatweaks/dark.css')
+                    </script>
+                </main>
+                <div class="theme-switch-div">
+                    <p class="theme-switch-label">Dark Theme<label class="theme-switch">
+                                        <input type="checkbox" id="themebox" onclick="onCheckThemeBox(false, false, '../styles/vanillatweaks/light.css', '../styles/vanillatweaks/dark.css')">
+                                                <span class="slider round"></span>
+                                            </label>
+                    </p>
+                </div>
             </div>
         </div>
     </div>
