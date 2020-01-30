@@ -245,6 +245,14 @@
             ]
         },
         {
+            "id": "furnace_broken_xp",
+            "name": "Stored XP in an furnace now drops when broken.",
+            "desc": "",
+            "versions": [
+                1.15
+            ]
+        },
+        {
             "id": "hostile_burn_in_daylight",
             "name": "Baby Zombies and Creepers burn in daylight.",
             "desc": "",
