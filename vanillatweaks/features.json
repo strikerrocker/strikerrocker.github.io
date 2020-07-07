@@ -89,6 +89,7 @@
             "desc": "Changes the recipe's for all stair to be more <strong>consistent</strong>.",
             "versions": [
                 1.12,
+                1.14,
                 1.15
             ]
         },
