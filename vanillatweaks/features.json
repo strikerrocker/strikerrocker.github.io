@@ -97,7 +97,9 @@
             "name": "Better stone tools recipes",
             "desc": "Changes the recipe's for all stone tools to use stone instead of cobblestone.",
             "versions": [
-                1.12
+                1.12,
+                1.14,
+                1.15
             ]
         },
         {
