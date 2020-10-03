@@ -7,7 +7,8 @@
             "versions": [
                 1.12,
                 1.14,
-                1.15
+                1.15,
+                1.16
             ]
         },
         {
@@ -17,7 +18,8 @@
             "versions": [
                 1.12,
                 1.14,
-                1.15
+                1.15,
+                1.16
             ]
         },
         {
@@ -28,7 +30,8 @@
             "versions": [
                 1.12,
                 1.14,
-                1.15
+                1.15,
+                1.16
             ]
         },
         {
@@ -39,7 +42,8 @@
             "versions": [
                 1.12,
                 1.14,
-                1.15
+                1.15,
+                1.16
             ]
         },
         {
@@ -50,7 +54,8 @@
             "versions": [
                 1.12,
                 1.14,
-                1.15
+                1.15,
+                1.16
             ]
         },
         {
@@ -69,7 +74,8 @@
             "versions": [
                 1.12,
                 1.14,
-                1.15
+                1.15,
+                1.16
             ]
         },
         {
@@ -79,7 +85,8 @@
             "versions": [
                 1.12,
                 1.14,
-                1.15
+                1.15,
+                1.16
             ]
         }
     ],
@@ -90,7 +97,8 @@
             "versions": [
                 1.12,
                 1.14,
-                1.15
+                1.15,
+                1.16
             ]
         },
         {
@@ -100,7 +108,8 @@
             "versions": [
                 1.12,
                 1.14,
-                1.15
+                1.15,
+                1.16
             ]
         },
         {
@@ -110,7 +119,8 @@
             "versions": [
                 1.12,
                 1.14,
-                1.15
+                1.15,
+                1.16
             ]
         },
         {
@@ -120,7 +130,8 @@
             "versions": [
                 1.12,
                 1.14,
-                1.15
+                1.15,
+                1.16
             ]
         },
         {
@@ -138,7 +149,8 @@
             "versions": [
                 1.12,
                 1.14,
-                1.15
+                1.15,
+                1.16
             ]
         }
     ],
@@ -149,7 +161,8 @@
             "versions": [
                 1.12,
                 1.14,
-                1.15
+                1.15,
+                1.16
             ]
         },
         {
@@ -159,7 +172,8 @@
             "versions": [
                 1.12,
                 1.14,
-                1.15
+                1.15,
+                1.16
             ]
         },
         {
@@ -169,7 +183,8 @@
             "versions": [
                 1.12,
                 1.14,
-                1.15
+                1.15,
+                1.16
             ]
         },
         {
@@ -180,7 +195,8 @@
             "versions": [
                 1.12,
                 1.14,
-                1.15
+                1.15,
+                1.16
             ]
         },
         {
@@ -191,7 +207,8 @@
             "versions": [
                 1.12,
                 1.14,
-                1.15
+                1.15,
+                1.16
             ]
         },
         {
@@ -202,7 +219,8 @@
             "versions": [
                 1.12,
                 1.14,
-                1.15
+                1.15,
+                1.16
             ]
         }
     ],
@@ -213,7 +231,8 @@
             "versions": [
                 1.12,
                 1.14,
-                1.15
+                1.15,
+                1.16
             ]
         },
         {
@@ -223,7 +242,8 @@
             "versions": [
                 1.12,
                 1.14,
-                1.15
+                1.15,
+                1.16
             ]
         },
         {
@@ -233,7 +253,8 @@
             "versions": [
                 1.12,
                 1.14,
-                1.15
+                1.15,
+                1.16
             ]
         }
     ],
@@ -262,7 +283,8 @@
             "versions": [
                 1.12,
                 1.14,
-                1.15
+                1.15,
+                1.16
             ]
         },
         {
@@ -272,7 +294,8 @@
             "versions": [
                 1.12,
                 1.14,
-                1.15
+                1.15,
+                1.16
             ]
         },
         {
@@ -283,7 +306,8 @@
             "versions": [
                 1.12,
                 1.14,
-                1.15
+                1.15,
+                1.16
             ]
         },
         {
@@ -293,7 +317,8 @@
             "versions": [
                 1.12,
                 1.14,
-                1.15
+                1.15,
+                1.16
             ]
         },
         {
@@ -303,7 +328,8 @@
             "versions": [
                 1.12,
                 1.14,
-                1.15
+                1.15,
+                1.16
             ]
         },
         {
@@ -313,7 +339,8 @@
             "versions": [
                 1.12,
                 1.14,
-                1.15
+                1.15,
+                1.16
             ]
         },
         {
@@ -331,18 +358,20 @@
             "versions": [
                 1.12,
                 1.14,
-                1.15
+                1.15,
+                1.16
             ]
         },
         {
             "id": "hoe_harvesting",
             "name": "Hoe harvesting",
-            "desc": "Breaking grass or crops with a hoe will break a 3x3 of them. <br>A Diamond Hoe will break a 5x5 instead.",
+            "desc": "Breaking grass or crops with a hoe will break a 3x3 of them. <br>A Diamond Hoe will break a 5x5 instead. A Netherite Hoe will break 7x7.",
             "video": true,
             "versions": [
                 1.12,
                 1.14,
-                1.15
+                1.15,
+                1.16
             ]
         },
         {
@@ -353,7 +382,8 @@
             "versions": [
                 1.12,
                 1.14,
-                1.15
+                1.15,
+                1.16
             ]
         },
         {
@@ -364,7 +394,8 @@
             "versions": [
                 1.12,
                 1.14,
-                1.15
+                1.15,
+                1.16
             ]
         },
         {
@@ -375,7 +406,8 @@
             "versions": [
                 1.12,
                 1.14,
-                1.15
+                1.15,
+                1.16
             ]
         },
         {
@@ -385,7 +417,8 @@
             "versions": [
                 1.12,
                 1.14,
-                1.15
+                1.15,
+                1.16
             ]
         },
         {
@@ -404,13 +437,14 @@
             "versions": [
                 1.12,
                 1.14,
-                1.15
+                1.15,
+                1.16
             ]
         },
         {
             "id": "sponge_nether_dry",
             "name": "Sponges dry in nether",
-            "desc": "Wet sponges when placed dries and becomes a sponge block.",
+            "desc": "Wet sponges when placed dries and becomes a sponge block. Implemented in vanilla in 1.16",
             "versions": [
                 1.12,
                 1.14,
@@ -433,17 +467,19 @@
             "versions": [
                 1.12,
                 1.14,
-                1.15
+                1.15,
+                1.16
             ]
         },
         {
             "id": "auto_seed_planting",
             "name": "Dropped seeds/crops now plant themselves",
-            "desc": "Seeds will plant themselves after a (randomly-determined) couple of seconds delay. Farms can now be more easily automated!",
+            "desc": "<b>In 1.16</b> seeds will plant themselves after 6000 ticks(5mins). You can configure the chance and time it will take for seeds to plant.<br><b>In 1.12 :</b> Seeds will plant themselves after a (randomly-determined) couple of seconds delay. Farms can now be more easily automated!",
             "versions": [
                 1.12,
                 1.14,
-                1.15
+                1.15,
+                1.16
             ]
         }
     ]
