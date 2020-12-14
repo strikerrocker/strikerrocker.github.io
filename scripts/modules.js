@@ -50,7 +50,7 @@ function setupPill(element) {
        // loadJSON("features.json", function(response) {
           //  document.getElementById("card-slot").innerHTML = JSON.parse(response)["upcoming"];
     //});
-    } else {l̥
+    } else {̥
         loadModule(element.id);
     }
 }
