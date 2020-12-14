@@ -46,11 +46,11 @@ function setupPill(element) {
         element.setAttribute("class", element.getAttribute("class") + " active");
     if (element.id == "home") {
         document.getElementById("card-slot").innerHTML = homeHTML;
-    } else if (element.id == "upcoming") {
-        loadJSON("features.json", function(response) {
-            document.getElementById("card-slot").innerHTML = JSON.parse(response)["upcoming"];
-        });
-    } else {
+    //  } else if (element.id == "upcoming") {
+       // loadJSON("features.json", function(response) {
+          //  document.getElementById("card-slot").innerHTML = JSON.parse(response)["upcoming"];
+    //});
+    } else {l̥
         loadModule(element.id);
     }
 }
@@ -65,13 +65,18 @@ function loadModule(moduleName) {
             var name = feature["name"];
             var desc = feature["desc"];
             var advDesc = feature["advDesc"];
-            var versionString = "<h6>Supported Versions : ";
+            var versionString = "<h6>Supported Forge Versions : ";
             var versions = feature["versions"];
+            var fabricVersionString="<h6>Supported Forge Versions : ";
+            var fabric_versions=feature["fabric_versions"];
             for (j in versions) {
                 versionString = versionString + "<span class='badge badge-primary'>" + versions[j] + "</span>&ensp;";
             }
+            for (j in fabric_versions) {
+                fabricVersionString = fabricVersionString + "<span class='badge badge-primary'>" + fabric_versions[j] + "</span>&ensp;";
+            }
             versionString = versionString + "</h6>";
-
+            fabricVersionString=fabricVersionString+"</h6>";
             var cardSlot = document.getElementById("card-slot");
             cardSlot.innerHTML = cardSlot.innerHTML + '<div class="card element bg-light">' +
                 '<div class = "card-body p-0" >' +
@@ -89,7 +94,7 @@ function loadModule(moduleName) {
                 (advDesc != null ?
                     '<a data-toggle="collapse" href="#more_' + id + '" role="button" aria-expanded="true" aria-controls="more_' + id + '" class="">Show more</a>' +
                     '<div class="collapse" id="more_' + id + '">' + advDesc + '</div>' :
-                    '') + versionString +
+                    '') + versionString + fabricVersionString
 
                 '</div>'
             '</div></div></div>';
