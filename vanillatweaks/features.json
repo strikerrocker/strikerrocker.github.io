@@ -207,7 +207,7 @@
                 1.16
             ],
             "fabric_versions":[
-                
+                1.16
             ]
         },
         {
@@ -221,7 +221,7 @@
                 1.16
             ],
             "fabric_versions":[
-                
+                1.16
             ]
         },
         {
@@ -235,7 +235,7 @@
                 1.16
             ],
             "fabric_versions":[
-                
+                1.16
             ]
         },
         {
@@ -250,7 +250,7 @@
                 1.16
             ],
             "fabric_versions":[
-                
+                1.16
             ]
         },
         {
@@ -265,13 +265,13 @@
                 1.16
             ],
             "fabric_versions":[
-                
+                1.16
             ]
         },
         {
             "id": "homing",
             "name": "Homing",
-            "desc": "This enchantment goes on your bow. Your arrows will aim right at your target.",
+            "desc": "This enchantment goes on your bow. Your arrows will aim right at your target.<br>In fabric, each level decreases the inaccuracy of the arrow",
             "advDesc": "Level 1 works for entities 32 blocks away, level 2 works for entities 64 blocks away, and level 3 128 blocks away.",
             "versions": [
                 1.12,
@@ -280,7 +280,7 @@
                 1.16
             ],
             "fabric_versions":[
-                
+                1.16
             ]
         }
     ],
