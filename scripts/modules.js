@@ -50,7 +50,7 @@ function setupPill(element) {
        // loadJSON("features.json", function(response) {
           //  document.getElementById("card-slot").innerHTML = JSON.parse(response)["upcoming"];
     //});
-    } else {̥
+    } else {
         loadModule(element.id);
     }
 }
@@ -67,7 +67,7 @@ function loadModule(moduleName) {
             var advDesc = feature["advDesc"];
             var versionString = "<h6>Supported Forge Versions : ";
             var versions = feature["versions"];
-            var fabricVersionString="<h6>Supported Forge Versions : ";
+            var fabricVersionString="<h6>Supported Fabric Versions : ";
             var fabric_versions=feature["fabric_versions"];
             for (j in versions) {
                 versionString = versionString + "<span class='badge badge-primary'>" + versions[j] + "</span>&ensp;";
