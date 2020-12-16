@@ -614,10 +614,11 @@
             "name": "No Pesky lava pockets in the nether",
             "desc": "Nether is Less Dangerous as there are no Lava Pockets.",
             "versions": [
-                1.12
+                1.12,
+                1.16
             ],
             "fabric_versions":[
-                
+                1.16
             ]
         },
         {
@@ -631,7 +632,7 @@
                 1.16
             ],
             "fabric_versions":[
-                
+                1.16
             ]
         },
         {
