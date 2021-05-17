@@ -34,24 +34,24 @@ function onCheckThemeBox(first, index, lightCSS, darkCSS) {
 
 function elementsTheme() {
     if (document.getElementById("themebox").checked) {
-        document.getElementById("discord").src = "https://discordapp.com/widget?id=325065492899299328&theme=dark";
-        document.getElementById("github").src = "assets/github_dark.png";
-        document.getElementById("twitter").src = "assets/twitter_dark.png";
-        if (document.getElementById("twitter-widget-0") != null && document.getElementById("twitter-widget-1") != null) {
-            document.getElementById("twitter-widget-0").hidden = true;
-            document.getElementById("twitter-widget-1").hidden = false;
-        } else {
-            setTimeout(elementsTheme, 2000);
-        }
+        //document.getElementById("discord").src = "https://discordapp.com/widget?id=325065492899299328&theme=dark";
+        document.getElementById("github").src = "./assets/github_dark.png";
+        document.getElementById("twitter").src = "./assets/twitter_dark.png";
+        // if (document.getElementById("twitter-widget-0") != null && document.getElementById("twitter-widget-1") != null) {
+        //     document.getElementById("twitter-widget-0").hidden = true;
+        //     document.getElementById("twitter-widget-1").hidden = false;
+        // } else {
+        //     setTimeout(elementsTheme, 2000);
+        // }
     } else {
-        document.getElementById("discord").src = "https://discordapp.com/widget?id=325065492899299328&theme=light";
-        document.getElementById("github").src = "assets/github_light.png";
-        document.getElementById("twitter").src = "assets/twitter_light.png";
-        if (document.getElementById("twitter-widget-0") != null && document.getElementById("twitter-widget-1") != null) {
-            document.getElementById("twitter-widget-0").hidden = false;
-            document.getElementById("twitter-widget-1").hidden = true;
-        } else {
-            setTimeout(elementsTheme, 2000);
-        }
+        // document.getElementById("discord").src = "https://discordapp.com/widget?id=325065492899299328&theme=light";
+        document.getElementById("github").src = "./assets/github_light.png";
+        document.getElementById("twitter").src = "./assets/twitter_light.png";
+        // if (document.getElementById("twitter-widget-0") != null && document.getElementById("twitter-widget-1") != null) {
+        //     document.getElementById("twitter-widget-0").hidden = false;
+        //     document.getElementById("twitter-widget-1").hidden = true;
+        // } else {
+        //     setTimeout(elementsTheme, 2000);
+        // }
     }
 }

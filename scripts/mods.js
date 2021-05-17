@@ -24,7 +24,7 @@ function httpGetAsync(element, theUrl, callback) {
             callback(element, xmlHttp.responseText);
     }
     xmlHttp.open("GET", theUrl, true);
-    xmlHttp.send(null);
+    xmlHttp.send();
 }
 
 function fillInfoForResponse(element, response) {
