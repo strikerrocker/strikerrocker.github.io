@@ -1,36 +1,50 @@
 {
-    "forge": [{
+    "forge": [
+        {
             "id": "vanillatweaks",
-            "api": "https://api.cfwidget.com/mc-mods/minecraft/vanillatweaks"
+            "api": "https://api.cfwidget.com/272637"
         },
         {
             "id": "sbm-jukebox",
-            "api": "https://api.cfwidget.com/minecraft/mc-mods/sbm-jukebox"
+            "api": "https://api.cfwidget.com/292430"
         },
         {
             "id": "sbm-cardboardboxes",
-            "api": "https://api.cfwidget.com/mc-mods/minecraft/248343-sbm-cardboardboxes"
+            "api": "https://api.cfwidget.com/248343"
         },
         {
             "id": "sbm-magic-mirror",
-            "api": "https://api.cfwidget.com/mc-mods/minecraft/250881-sbm-magic-mirror"
+            "api": "https://api.cfwidget.com/250881"
         },
         {
-            "id": "tweakoni",
-            "api": "https://api.cfwidget.com/minecraft/mc-mods/tweakoni"
+            "id": "limited-spawners",
+            "api": "https://api.cfwidget.com/410922"
         }
     ],
-    "fabric": [{
+    "fabric": [
+        {
+            "id": "vanillatweaks-fabric",
+            "api": "https://api.cfwidget.com/428252"
+        },
+        {
             "id": "clear-despawn-fabric",
-            "api": "https://api.cfwidget.com/minecraft/mc-mods/clear-despawn-fabric"
+            "api": "https://api.cfwidget.com/308793"
         },
         {
             "id": "furnace-xp-drop-fabric",
-            "api": "https://api.cfwidget.com/minecraft/mc-mods/furnace-xp-drop-fabric"
+            "api": "https://api.cfwidget.com/309105"
         },
         {
             "id": "craftingpad-fabric",
-            "api": "https://api.cfwidget.com/minecraft/mc-mods/craftingpad-fabric"
+            "api": "https://api.cfwidget.com/308976"
+        },
+        {
+            "id": "limited-spawners-fabric",
+            "api": "https://api.cfwidget.com/429084"
+        },
+        {
+            "id": "stitched-snow",
+            "api": "https://api.cfwidget.com/430610"
         }
     ]
 }
