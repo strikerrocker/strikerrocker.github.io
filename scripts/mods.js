@@ -36,7 +36,7 @@ function fillInfoForResponse(element, response) {
     downloads[0].innerHTML = numberWithCommas(obj.downloads.total) + " Downloads";
     title[0].innerHTML = obj.title;
     link[0].setAttribute("href", obj.urls.curseforge);
-    img[0].setAttribute("src", obj.thumbnail.replace("120/120/", "").replace("thumbnails/", ""));
+    img[0].setAttribute("src", obj.thumbnail);
 }
 
 function numberWithCommas(x) {
