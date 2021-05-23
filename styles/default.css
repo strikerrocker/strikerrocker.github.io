@@ -48,6 +48,10 @@ h2 {
     height: 72px;
 }
 
+.info-card {
+    height: 60px;
+}
+
 .card-title {
     padding: 0;
     margin: 0;
