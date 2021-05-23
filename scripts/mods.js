@@ -59,7 +59,7 @@ function setupMods() {
                 loader.innerHTML = loader.innerHTML + '<div class="card element" id="' + mod["id"] + '" api="' + mod["api"] + '">' +
                     '<a class="element_link" href="">' +
                     '<img src="" class="card-img-top element_img" alt="No Connection to CF API">' +
-                    '<div class="card-body">' +
+                    '<div class="card-body mod-card">' +
                     '<h5 class="card-title element_text"></h5>' +
                     '<div class="element_downloads card-text">? Downloads</div>' +
                     '</div></a></div>';

@@ -24,10 +24,6 @@ body {
     background-color: #007bff;
 }
 
-div .timeline-Tweet .timeline-Tweet--isRetweet .u-cf .js-tweetIdInfo .js-clickToOpenTarget {
-    color: white!important;
-}
-
 .slider:before {
     background: #343a40;
 }

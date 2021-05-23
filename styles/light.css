@@ -6,10 +6,9 @@
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
 }
 
-.twitter-timeline {
-    border: 1px solid rgba(200, 200, 200, .5)!important;
-}
-
 .slider:before {
     background: white;
+    border-style: groove;
+    border-width: 1px;
+    color: grey;
 }

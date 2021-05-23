@@ -46,10 +46,10 @@ function setupPill(element) {
         element.setAttribute("class", element.getAttribute("class") + " active");
     if (element.id == "home") {
         document.getElementById("card-slot").innerHTML = homeHTML;
-    //  } else if (element.id == "upcoming") {
-       // loadJSON("features.json", function(response) {
-          //  document.getElementById("card-slot").innerHTML = JSON.parse(response)["upcoming"];
-    //});
+        //  } else if (element.id == "upcoming") {
+        // loadJSON("features.json", function(response) {
+        //  document.getElementById("card-slot").innerHTML = JSON.parse(response)["upcoming"];
+        //});
     } else {
         loadModule(element.id);
     }
@@ -67,8 +67,8 @@ function loadModule(moduleName) {
             var advDesc = feature["advDesc"];
             var versionString = "<h6>Supported Forge Versions : ";
             var versions = feature["versions"];
-            var fabricVersionString="<h6>Supported Fabric Versions : ";
-            var fabric_versions=feature["fabric_versions"];
+            var fabricVersionString = "<h6>Supported Fabric Versions : ";
+            var fabric_versions = feature["fabric_versions"];
             for (j in versions) {
                 versionString = versionString + "<span class='badge badge-primary'>" + versions[j] + "</span>&ensp;";
             }
@@ -76,7 +76,7 @@ function loadModule(moduleName) {
                 fabricVersionString = fabricVersionString + "<span class='badge badge-primary'>" + fabric_versions[j] + "</span>&ensp;";
             }
             versionString = versionString + "</h6>";
-            fabricVersionString=fabricVersionString+"</h6>";
+            fabricVersionString = fabricVersionString + "</h6>";
             var cardSlot = document.getElementById("card-slot");
             cardSlot.innerHTML = cardSlot.innerHTML + '<div class="card element bg-light">' +
                 '<div class = "card-body p-0" >' +
@@ -90,7 +90,7 @@ function loadModule(moduleName) {
                 '</div>' +
                 //Text region
                 '<div class="text-region col-md-9 p-4">' +
-                '<a name="' + id + '"><h3>' + name + '</h3></a><div name="description"><p>' + desc + '</p></div>' +
+                '<a name="' + id + '"><h3><b>' + name + '</b></h3></a><div name="description"><p>' + desc + '</p></div>' +
                 (advDesc != null ?
                     '<a data-toggle="collapse" href="#more_' + id + '" role="button" aria-expanded="true" aria-controls="more_' + id + '" class="">Show more</a>' +
                     '<div class="collapse" id="more_' + id + '">' + advDesc + '</div>' :
