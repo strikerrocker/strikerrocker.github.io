@@ -10,8 +10,8 @@ header.splash {
     background-image: url("../../assets/vanillatweaks/home.png")
 }
 
-code {
-    color: #699c79;
+nav{
+    padding-top: 30px;
 }
 
 a,

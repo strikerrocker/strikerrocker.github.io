@@ -1,7 +1,9 @@
 var homeHTML = "";
+var headerHTML="";
 
 function loadHomeString() {
     homeHTML = document.getElementById("card-slot").innerHTML;
+    headerHTML=document.getElementById("header").innerHTML;
 }
 
 function loadJSON(path, callback) {
@@ -46,12 +48,12 @@ function setupPill(element) {
         element.setAttribute("class", element.getAttribute("class") + " active");
     if (element.id == "home") {
         document.getElementById("card-slot").innerHTML = homeHTML;
-        //  } else if (element.id == "upcoming") {
-        // loadJSON("features.json", function(response) {
-        //  document.getElementById("card-slot").innerHTML = JSON.parse(response)["upcoming"];
-        //});
+        document.getElementById("header").innerHTML=headerHTML;
     } else {
         loadModule(element.id);
+        
+        document.getElementById("header").classList.remove("splash");
+        document.getElementById("header").innerHTML="";
     }
 }
 
@@ -84,7 +86,7 @@ function loadModule(moduleName) {
                 //Image region
                 '<div class="image-region col-md-3">' +
                 ((feature["video"] == null || feature["video"] == false) ?
-                    '<img src="../assets/vanillatweaks/' + moduleName + '/' + id + '.png' + '" alt="Picture representing ' + name + '" onerror="removeImageRegion(this);" class="img-thumbnail m-sm-2">' :
+                    '<img src="../assets/vanillatweaks/' + moduleName + '/' + id + '.png' + '" alt="Picture representing ' + name + '" onerror="removeImageRegion(this);" class=" m-sm-2">' :
                     '<video onerror="removeImageRegion(this);" loop="" onmouseover="play(this);" onmouseout="pause(this);" width="267">Your browser does not support HTML5 video.<source src="../assets/vanillatweaks/' + moduleName + '/' + id + '.webm" type="video/webm"></video>'
                 ) +
                 '</div>' +
