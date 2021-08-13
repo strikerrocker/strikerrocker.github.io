@@ -1,16 +1,16 @@
 var homeHTML = "";
-var headerHTML="";
+var headerHTML = "";
 
 function loadHomeString() {
     homeHTML = document.getElementById("card-slot").innerHTML;
-    headerHTML=document.getElementById("header").innerHTML;
+    headerHTML = document.getElementById("header").innerHTML;
 }
 
 function loadJSON(path, callback) {
     var xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
     xobj.open('GET', path, true);
-    xobj.onreadystatechange = function() {
+    xobj.onreadystatechange = function () {
         if (xobj.readyState == 4 && xobj.status == "200") {
             callback(xobj.responseText);
         }
@@ -48,17 +48,17 @@ function setupPill(element) {
         element.setAttribute("class", element.getAttribute("class") + " active");
     if (element.id == "home") {
         document.getElementById("card-slot").innerHTML = homeHTML;
-        document.getElementById("header").innerHTML=headerHTML;
+        document.getElementById("header").innerHTML = headerHTML;
     } else {
         loadModule(element.id);
-        
+
         document.getElementById("header").classList.remove("splash");
-        document.getElementById("header").innerHTML="";
+        document.getElementById("header").innerHTML = "";
     }
 }
 
 function loadModule(moduleName) {
-    loadJSON("features.json", function(response) {
+    loadJSON("features.json", function (response) {
         var json = JSON.parse(response);
         var module = json[moduleName]
         for (i in module) {
@@ -79,6 +79,8 @@ function loadModule(moduleName) {
             }
             versionString = versionString + "</h6>";
             fabricVersionString = fabricVersionString + "</h6>";
+            if (fabric_versions.length == 0)
+                fabricVersionString = "";
             var cardSlot = document.getElementById("card-slot");
             cardSlot.innerHTML = cardSlot.innerHTML + '<div class="card element bg-light">' +
                 '<div class = "card-body p-0" >' +
@@ -92,13 +94,13 @@ function loadModule(moduleName) {
                 '</div>' +
                 //Text region
                 '<div class="text-region col-md-9 p-4">' +
-                '<a name="' + id + '"><h3><b>' + name + '</b></h3></a><div name="description"><p>' + desc + '</p></div>' +
+                '<a name="' + id + '"><h3><b>' + name + '</b></h3></a><div name="description"><h6>' + desc + '</h6></div>' +
                 (advDesc != null ?
                     '<a data-toggle="collapse" href="#more_' + id + '" role="button" aria-expanded="true" aria-controls="more_' + id + '" class="">Show more</a>' +
                     '<div class="collapse" id="more_' + id + '">' + advDesc + '</div>' :
                     '') + versionString + fabricVersionString
 
-                '</div>'
+            '</div>'
             '</div></div></div>';
             onCheckThemeBox(false, false, '../styles/vanillatweaks/light.css', '../styles/vanillatweaks/dark.css');
         }

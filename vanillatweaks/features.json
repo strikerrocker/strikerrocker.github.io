@@ -16,14 +16,6 @@
       "fabric_versions": [1.16, 1.17]
     },
     {
-      "id": "binoculars",
-      "name": "Binoculars",
-      "desc": "A non-OP way to zoom! The amount of zoom is configurable.",
-      "advDesc": "Adds a new item which can be equipped in helmet slot and when equipped let's you zoom. <br> Has a baubles version when baubles is installed.",
-      "versions": [1.15, 1.16],
-      "fabric_versions": [1.16]
-    },
-    {
       "id": "slime_finder",
       "name": "Slime Finder",
       "desc": "A way in-game to identify slime chunks by right clicking.",
@@ -53,23 +45,17 @@
       "desc": "Adds a new item which can right clicked to open a 3x3 crafting menu.",
       "versions": [1.15, 1.16, 1.17],
       "fabric_versions": [1.16, 1.17]
+    },
+    {
+      "id": "binoculars",
+      "name": "Binoculars",
+      "desc": "A non-OP way to zoom! The amount of zoom is configurable.",
+      "advDesc": "Adds a new item which can be equipped in helmet slot and when equipped let's you zoom. <br> Has a baubles version when baubles is installed.",
+      "versions": [1.15, 1.16],
+      "fabric_versions": [1.16]
     }
   ],
   "crafting": [
-    {
-      "id": "better_stairs_recipes",
-      "name": "Better stairs recipes",
-      "desc": "Changes the recipe's for all stair to be more <strong>consistent</strong>.",
-      "versions": [1.15, 1.16, 1.17],
-      "fabric_versions": []
-    },
-    {
-      "id": "better_stone_tools_recipes",
-      "name": "Better stone tools recipes",
-      "desc": "Changes the recipe's for all stone tools to use stone instead of cobblestone.",
-      "versions": [1.15, 1.16, 1.17],
-      "fabric_versions": []
-    },
     {
       "id": "better_chests_recipes",
       "name": "Better chests recipes",
@@ -104,6 +90,20 @@
       "desc": "Adds an recipe for repeater without using redstone torch but the materials needed for it",
       "versions": [1.16, 1.17],
       "fabric_versions": [1.16, 1.17]
+    },
+    {
+      "id": "better_stairs_recipes",
+      "name": "Better stairs recipes",
+      "desc": "Changes the recipe's for all stair to be more <strong>consistent</strong>.",
+      "versions": [1.15, 1.16],
+      "fabric_versions": []
+    },
+    {
+      "id": "better_stone_tools_recipes",
+      "name": "Better stone tools recipes",
+      "desc": "Changes the recipe's for all stone tools to use stone instead of cobblestone.",
+      "versions": [1.15, 1.16],
+      "fabric_versions": []
     }
   ],
   "enchanting": [
@@ -178,13 +178,6 @@
   ],
   "tweaks": [
     {
-      "id": "slab_stairs_sit",
-      "name": "Sit on stairs and slabs",
-      "desc": "Right click a slab or stair to sit on it!",
-      "versions": [1.15],
-      "fabric_versions": []
-    },
-    {
       "id": "beehive_tooltip",
       "name": "Beehive and Bee nest Tooltip",
       "desc": "Displays the honey level and number of bees in the best nest/hive when advanced tooltip is turned on",
@@ -192,25 +185,11 @@
       "fabric_versions": [1.16, 1.17]
     },
     {
-      "id": "furnace_broken_xp",
-      "name": "Stored XP in an furnace now drops when broken.",
-      "desc": "",
-      "versions": [1.15],
-      "fabric_versions": []
-    },
-    {
       "id": "hostile_burn_in_daylight",
       "name": "Baby Zombies and Creepers burn in daylight.",
       "desc": "",
       "versions": [1.15, 1.16, 1.17],
       "fabric_versions": [1.16, 1.17]
-    },
-    {
-      "id": "disable_potion_shift",
-      "name": "No more GUI shifting due to potion effects",
-      "desc": "Disables GUI shifting when having potion effects.",
-      "versions": [1.15, 1.16, 1.17],
-      "fabric_versions": []
     },
     {
       "id": "sign_editing",
@@ -235,50 +214,12 @@
       "fabric_versions": [1.16, 1.17]
     },
     {
-      "id": "expanded_creative_tab",
-      "name": "Dragon eggs & Command blocks in creative inventoy",
-      "desc": "Command blocks can be found in the redstone creative tab.<br> Dragon eggs can be found in the decorations tab.",
-      "versions": [1.15, 1.16],
-      "fabric_versions": []
-    },
-    {
-      "id": "higher_roman_no",
-      "name": "Potion and enchantment level roman numerals now are localized up to level 255.",
-      "desc": "",
-      "versions": [1.15, 1.16, 1.17],
-      "fabric_versions": [1.16, 1.17]
-    },
-    {
       "id": "hoe_harvesting",
       "name": "Hoe harvesting",
       "desc": "Breaking grass or crops with a hoe will break a 3x3 of them. <br>A Diamond Hoe will break a 5x5 instead. A Netherite Hoe will break 7x7.",
       "video": true,
       "versions": [1.15, 1.16, 1.17],
       "fabric_versions": [1.16, 1.17]
-    },
-    {
-      "id": "tnt_lava",
-      "name": "TNT placed next to lava will ignite itelf.",
-      "desc": "",
-      "video": true,
-      "versions": [1.15, 1.16, 1.17],
-      "fabric_versions": [1.16, 1.17]
-    },
-    {
-      "id": "fire_arrow_block",
-      "name": "Fire arrows set block on fire",
-      "desc": "Fire arrows when hit on block sets the block on fire.",
-      "video": true,
-      "versions": [1.15, 1.16, 1.17],
-      "fabric_versions": [1.16, 1.17]
-    },
-    {
-      "id": "sponge_squising",
-      "name": "Squishy Sponges",
-      "desc": "Wet sponges on being squished set adjacent block as water if it's air.",
-      "video": true,
-      "versions": [1.15, 1.16],
-      "fabric_versions": []
     },
     {
       "id": "shift_itemframe_reverse",
@@ -296,9 +237,67 @@
       "fabric_versions": [1.16, 1.17]
     },
     {
+      "id": "tnt_lava",
+      "name": "TNT placed next to magma block or lava will ignite itelf.",
+      "desc": "",
+      "video": true,
+      "versions": [1.15, 1.16, 1.17],
+      "fabric_versions": [1.16, 1.17]
+    },
+    {
+      "id": "fire_arrow_block",
+      "name": "Fire arrows set block on fire",
+      "desc": "Fire arrows when hit on block sets the block on fire.",
+      "video": true,
+      "versions": [1.15, 1.16, 1.17],
+      "fabric_versions": [1.16, 1.17]
+    },
+    {
+      "id": "disable_potion_shift",
+      "name": "No more GUI shifting due to potion effects",
+      "desc": "Disables GUI shifting when having potion effects.",
+      "versions": [1.15, 1.16, 1.17],
+      "fabric_versions": []
+    },{
+      "id": "higher_roman_no",
+      "name": "Potion and enchantment level roman numerals now are localized up to level 255.",
+      "desc": "",
+      "versions": [1.15, 1.16, 1.17],
+      "fabric_versions": [1.16, 1.17]
+    },
+    {
+      "id": "expanded_creative_tab",
+      "name": "Dragon eggs & Command blocks in creative inventoy",
+      "desc": "Command blocks can be found in the redstone creative tab.<br> Dragon eggs can be found in the decorations tab.",
+      "versions": [1.15, 1.16],
+      "fabric_versions": []
+    },
+    {
+      "id": "sponge_squising",
+      "name": "Squishy Sponges",
+      "desc": "Wet sponges on being squished set adjacent block as water if it's air.",
+      "video": true,
+      "versions": [1.15, 1.16],
+      "fabric_versions": []
+    },
+    {
       "id": "sponge_nether_dry",
       "name": "Sponges dry in nether",
       "desc": "Wet sponges when placed dries and becomes a sponge block. Implemented in vanilla in 1.16",
+      "versions": [1.15],
+      "fabric_versions": []
+    },
+    {
+      "id": "slab_stairs_sit",
+      "name": "Sit on stairs and slabs",
+      "desc": "Right click a slab or stair to sit on it!",
+      "versions": [1.15],
+      "fabric_versions": []
+    },
+    {
+      "id": "furnace_broken_xp",
+      "name": "Stored XP in an furnace now drops when broken.",
+      "desc": "",
       "versions": [1.15],
       "fabric_versions": []
     }
