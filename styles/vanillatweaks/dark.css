@@ -1,5 +1,5 @@
 body {
-    background-color: #262A2E !important;
+    background-color: #003c3c !important;
     color: white;
 }
 
@@ -12,6 +12,10 @@ body {
 .nav-pills .show>.nav-link {
     color: #323232!important;
     background-color: #37c562;
+}
+
+.bg-dark {
+	background-color: rgb(27, 30, 31) !important;
 }
 
 input:checked+.slider {
