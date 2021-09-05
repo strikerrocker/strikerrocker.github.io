@@ -2,7 +2,7 @@ function loadJSON(path, callback) {
     var xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
     xobj.open('GET', path, true);
-    xobj.onreadystatechange = function() {
+    xobj.onreadystatechange = function () {
         if (xobj.readyState == 4 && xobj.status == "200") {
             callback(xobj.responseText);
         }
@@ -19,7 +19,7 @@ function getDataForElement(element, index, array) {
 
 function httpGetAsync(element, theUrl, callback) {
     var xmlHttp = new XMLHttpRequest();
-    xmlHttp.onreadystatechange = function() {
+    xmlHttp.onreadystatechange = function () {
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
             callback(element, xmlHttp.responseText);
     }
@@ -28,15 +28,9 @@ function httpGetAsync(element, theUrl, callback) {
 }
 
 function fillInfoForResponse(element, response) {
-    var downloads = document.querySelectorAll("div#" + element.id + " .element_downloads");
-    var title = document.querySelectorAll("div#" + element.id + " .element_text");
-    var link = document.querySelectorAll("div#" + element.id + " .element_link");
-    var img = document.querySelectorAll("div#" + element.id + " .element_img");
+    var downloads = element.querySelectorAll("div#" + element.id + " .element_downloads");
     var obj = JSON.parse(response);
     downloads[0].innerHTML = numberWithCommas(obj.downloads.total) + " Downloads";
-    title[0].innerHTML = obj.title;
-    link[0].setAttribute("href", obj.urls.curseforge);
-    img[0].setAttribute("src", obj.thumbnail);
 }
 
 function numberWithCommas(x) {
@@ -46,7 +40,7 @@ function numberWithCommas(x) {
 function setupMods() {
     var cardSlot = document.getElementById("card-slot");
     cardSlot.innerHTML = cardSlot.innerHTML + '<h1 id="title">My Mods</h1>';
-    loadJSON("mods.json", function(response) {
+    loadJSON("mods.json", function (response) {
         var json = JSON.parse(response);
         var modloader = ["forge", "fabric"];
         for (i in modloader) {
@@ -56,11 +50,14 @@ function setupMods() {
             for (j in mods) {
                 var mod = mods[j];
                 var loader = document.getElementById(modloader[i]);
-                loader.innerHTML = loader.innerHTML + '<div class="card element" id="' + mod["id"] + '" api="' + mod["api"] + '">' +
-                    '<a class="element_link" href="">' +
-                    '<img src="" class="card-img-top element_img" alt="No Connection to CF API">' +
+                var id = mod["id"];
+                var type = mod["logo-type"] != null ? mod["logo-type"] : ".png";
+                var logo = "../assets/mods/" + id + type;
+                loader.innerHTML = loader.innerHTML + '<div class="card element" id="' + id + '" api="' + mod["api"] + '">' +
+                    '<a href="' + mod["link"] + '">' +
+                    '<img src="' + logo + '" class="card-img-top" alt="No Connection to CF API">' +
                     '<div class="card-body mod-card">' +
-                    '<h5 class="card-title element_text"></h5>' +
+                    '<h5 class="card-title element_text">' + mod["name"] + '</h5>' +
                     '<div class="element_downloads card-text">? Downloads</div>' +
                     '</div></a></div>';
             }

@@ -45,7 +45,7 @@
             </div>
         </div>
     </div>
-   
+    
     <nav class="nav nav-pills nav-fill justify-content-center mb-5">
         <a class="nav-link active" id="home" onclick="setupPill(this)">Home</a>
         <a class="nav-link" id="crafting" onclick="setupPill(this)">Crafting</a>
@@ -122,7 +122,7 @@
                     </p>
                 </div>
                 <script>
-                    loadHomeString();
+                    setup();
                     if (document.cookie == "dark=true") {
                         document.getElementById("themebox").checked = true;
                         document.querySelector("link[href='../styles/vanillatweaks/light.css']").href = "../styles/vanillatweaks/dark.css";
