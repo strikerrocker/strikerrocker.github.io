@@ -1,0 +1,101 @@
+<script>
+  import Nav from "$lib/Nav.svelte";
+  import ThemeSlider from "$lib/ThemeSlider.svelte";
+  import { CardGroup, Column, Container, Row } from "sveltestrap";
+  import { onMount } from "svelte";
+  import SmallCard from "$lib/SmallCard.svelte";
+  import { httpGet, httpGetElement } from "./__layout.svelte";
+
+  let json = null;
+  let modloader = ["forge", "fabric"];
+  let updatedDownloads = false;
+  onMount(() => {
+    httpGet( "/assets/mods/mods.json", ( response) => {
+      json = JSON.parse(response);
+    });
+    const interval = setInterval(() => {
+      if (json != null) {
+        if (updatedDownloads == false) {
+          onLoad();
+          updatedDownloads = true;
+        }
+      }
+    }, 1000);
+  });
+
+  function onLoad() {
+    var elements = document.getElementsByClassName("element");
+    var array = Array.from(elements);
+    array.forEach(getDataForElement);
+  }
+
+  function getDataForElement(element) {
+    var id = element.id;
+    if (id != "") {
+      httpGetElement(element, element.getAttribute("api"), fillInfoForResponse);
+    }
+  }
+
+  function fillInfoForResponse(element, response) {
+    var downloads = element.querySelectorAll(
+      "div#" + element.id + " .card-text"
+    );
+    var obj = JSON.parse(response);
+    downloads[0].innerHTML =
+      numberWithCommas(obj.downloads.total) + " Downloads";
+  }
+
+  function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+</script>
+
+<Nav current_page="My Mods" />
+<Container>
+  <Row>
+    <Column>
+      <h1 id="title">My Mods</h1>
+      {#each modloader as loader, i}
+        <h3><u>Mods for {loader}</u></h3>
+        <CardGroup class="justify-content-center" id={loader}>
+          {#if json != undefined}
+            {#each json[loader] as mod, i}
+              <SmallCard
+                id={mod["id"]}
+                api={mod["api"]}
+                href={mod["link"]}
+                src={"/assets/mods/" +
+                  mod["id"] +
+                  (mod["logo_type"] != null ? mod["logo_type"] : ".png")}
+                alt={mod["name"] + " Logo"}
+                title={mod["name"]}
+                text="? Downloads"
+              />
+            {/each}
+          {/if}
+        </CardGroup>
+      {/each}
+      <!--Happens too fast find a better spot-->
+      <ThemeSlider />
+    </Column>
+  </Row>
+</Container>
+
+<style>
+  :global(.container) {
+    max-width: 1140px;
+  }
+
+  :global(body:not(.dark)) {
+    background-color: azure;
+  }
+
+  :global(body.dark) {
+    background-color: #003c3c;
+    color: white;
+  }
+
+  h1 {
+    text-align: center;
+  }
+</style>

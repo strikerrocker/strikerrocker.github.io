@@ -1,0 +1,27 @@
+{
+  "name": "stikerrocker.github.io",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "svelte-kit dev",
+    "build": "npm run clean && svelte-kit build",
+    "preview": "svelte-kit preview",
+    "clean": "trash build",
+    "deploy": "npm run build && npx gh-pages -d build -t true"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-static": "^1.0.0-next.18",
+    "@sveltejs/kit": "next",
+    "gh-pages": "^3.2.3",
+    "svelte": "^3.42.4",
+    "trash-cli": "^4.0.0"
+  },
+  "type": "module",
+  "main": "svelte.config.js",
+  "author": "StrikerRocker",
+  "license": "MIT",
+  "dependencies": {
+    "svelte-preprocess": "^4.9.2",
+    "sveltestrap": "^5.6.3",
+    "touch": "^3.1.0"
+  }
+}

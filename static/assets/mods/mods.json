@@ -1,0 +1,73 @@
+{
+  "forge": [
+    {
+      "id": "vanillatweaks",
+      "name": "VanillaTweaks",
+      "api": "https://api.cfwidget.com/272637",
+      "link": "https://www.curseforge.com/minecraft/mc-mods/vanillatweaks"
+    },
+    {
+      "id": "sbm-jukebox",
+      "name": "[SBM] Jukebox",
+      "api": "https://api.cfwidget.com/292430",
+      "link": "https://www.curseforge.com/minecraft/mc-mods/sbm-jukebox"
+    },
+    {
+      "id": "sbm-cardboardboxes",
+      "name": "[SBM] Cardboard Boxes",
+      "api": "https://api.cfwidget.com/248343",
+      "link": "https://www.curseforge.com/minecraft/mc-mods/sbm-cardboardboxes"
+    },
+    {
+      "id": "sbm-magic-mirror",
+      "name": "[SBM] Magic Mirror",
+      "api": "https://api.cfwidget.com/250881",
+      "link": "https://www.curseforge.com/minecraft/mc-mods/sbm-magic-mirror"
+    },
+    {
+      "id": "limited-spawners",
+      "name": "Limited Spawners",
+      "api": "https://api.cfwidget.com/410922",
+      "link": "https://www.curseforge.com/minecraft/mc-mods/limited-spawners"
+    }
+  ],
+  "fabric": [
+    {
+      "id": "vanillatweaks",
+      "name": "VanillaTweaks",
+      "api": "https://api.cfwidget.com/428252",
+      "link": "https://www.curseforge.com/minecraft/mc-mods/vanillatweaks-fabric"
+    },
+    {
+      "id": "clear-despawn",
+      "name": "Clear Despawn",
+      "api": "https://api.cfwidget.com/308793",
+      "link": "https://www.curseforge.com/minecraft/mc-mods/clear-despawn-fabric"
+    },
+    {
+      "id": "furnace-xp-drop",
+      "name": "Furnace XP Drop",
+      "api": "https://api.cfwidget.com/309105",
+      "link": "https://www.curseforge.com/minecraft/mc-mods/furnace-xp-drop-fabric",
+      "logo_type": ".gif"
+    },
+    {
+      "id": "craftingpad",
+      "name": "Crafting Pad",
+      "api": "https://api.cfwidget.com/308976",
+      "link": "https://www.curseforge.com/minecraft/mc-mods/craftingpad-fabric"
+    },
+    {
+      "id": "limited-spawners",
+      "name": "Limited Spawners",
+      "api": "https://api.cfwidget.com/429084",
+      "link": "https://www.curseforge.com/minecraft/mc-mods/limited-spawner-fabric"
+    },
+    {
+      "id": "stitched-snow",
+      "name": "Stiched Snow",
+      "api": "https://api.cfwidget.com/430610",
+      "link": "https://www.curseforge.com/minecraft/mc-mods/stitchedsnow"
+    }
+  ]
+}
