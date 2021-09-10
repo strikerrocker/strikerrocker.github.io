@@ -1,144 +1,102 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Home</title>
-    <meta charset="utf-8">
-    <!--Meta properties-->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="StrikerRocker">
-    <meta name="author" content="StrikerRocker">
-    <meta property="og:title" content="Home">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="A website about me.">
-    <meta property="og:site_name" content="StrikerRocker's Site">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109233842-2"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" />
+	
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
+		
 
-        gtag('config', 'UA-109233842-2');
-    </script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="styles/default.css" rel="stylesheet" type="text/css">
-    <link href="styles/light.css" rel="stylesheet" type="text/css">
-    <script src="scripts/theme.js"></script>
+		<link rel="modulepreload" href="/_app/start-df1b7bbc.js">
+		<link rel="modulepreload" href="/_app/chunks/vendor-0e3828d2.js">
+		<link rel="modulepreload" href="/_app/pages/__layout.svelte-17d039dd.js">
+		<link rel="modulepreload" href="/_app/pages/index.svelte-3aec95ce.js">
+		<link rel="modulepreload" href="/_app/chunks/SmallCard-0c6387b4.js">
+		<link rel="modulepreload" href="/_app/chunks/ThemeSlider-85b26c78.js">
+		<link rel="stylesheet" href="/_app/assets/start-61d1577b.css">
+		<link rel="stylesheet" href="/_app/assets/vendor-cf063f61.css">
+		<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-3a85feae.css">
+		<link rel="stylesheet" href="/_app/assets/SmallCard-a1f30d3e.css">
+		<link rel="stylesheet" href="/_app/assets/ThemeSlider-e68f95e7.css">
+
+		<script type="module">
+			import { start } from "/_app/start-df1b7bbc.js";
+			start({
+				target: document.querySelector("#svelte"),
+				paths: {"base":"","assets":""},
+				session: {},
+				host: location.host,
+				route: true,
+				spa: false,
+				trailing_slash: "never",
+				hydrate: {
+					status: 200,
+					error: null,
+					nodes: [
+						import("/_app/pages/__layout.svelte-17d039dd.js"),
+						import("/_app/pages/index.svelte-3aec95ce.js")
+					],
+					page: {
+						host: location.host, // TODO this is redundant
+						path: "/",
+						query: new URLSearchParams(""),
+						params: {}
+					}
+				}
+			});
+		</script>
 </head>
 
 <body>
-    <br>
-    <nav class="nav nav-pills nav-fill justify-content-center mb-5">
-        <a class="nav-link home active" href="index.html">Home</a>
-        <a class="nav-link mods" href="pages/mods.html">My Mods</a>
-        <a class="nav-link vanillatweaks" href="vanillatweaks/index.html">VanillaTweaks</a>
-    </nav>
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="rightbar">
-                    <!-- <a class="twitter-timeline" data-width="300" data-height="317" data-theme="light" href="https://twitter.com/StrikerRocker?ref_src=twsrc%5Etfw">Tweets by StrikerRocker</a>
-                    <a class="twitter-timeline" data-width="300" data-height="317" data-theme="dark" href="https://twitter.com/StrikerRocker?ref_src=twsrc%5Etfw">Tweets by StrikerRocker</a>
-                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                    <iframe id="discord" src="https://discordapp.com/widget?id=325065492899299328&theme=light" width="100%" height="275" allowtransparency="true" frameborder="0"></iframe> -->
-                </div>
-                <main>
-                    <section>
-                        <h2>About StrikerRocker</h2>
-                        <br>
-                        <p>I'm a young developer currently learning software and web development through indie game and addon development.
-                    </section>
-                    <hr>
-                    <section>
-                        <h2>Commissions</h2>
-                        <br>
-                        <p>
-                            I sometimes do modding commissions (this is highly dependent on the case) contact me if you're interested.
-                        </p>
-                    </section>
-                    <hr>
-                    <section>
-                        <h2>Projects</h2>
-                        <br>
-                        <p>
-                            Primarily focused on making mods for the game <a href="http://minecraft.net/">
-                                Minecraft</a>. Which can be seen <a href="pages/mods.html">here </a> </p>
-                        </p>
-                    </section>
-                    <hr>
-                    <section>
-                        <h2>Links</h2>
-                        <br>
-                        <div class="card-deck justify-content-center">
-                            <div class="card">
-                                <a href="https://www.twitter.com/strikerrocker">
-                                    <img id="twitter" src="assets/twitter_light.png" class="card-img-top contact" alt="Twitter logo">
-                                    <div class="card-body info-card">
-                                        <p class="card-title element_text">Twitter - StrikerRocker</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="card">
-                                <a href="https://discord.gg/tqcqeSj">
-                                    <img src="assets/Discord-Logo-Color.png" class="card-img-top contact" alt="Discord logo">
-                                    <div class="card-body info-card">
-                                        <p class="card-title element_text">Discord - StrikerRocker#7058</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="card">
-                                <a href="https://www.github.com/strikerrocker">
-                                    <img id="github" src="assets/github_light.png" class="card-img-top contact contact" alt="github logo">
-                                    <div class="card-body info-card">
-                                        <p class="card-title element_text">Github - StrikerRocker</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="card">
-                                <a href="https://www.curseforge.com/members/strikerrocker/projects">
-                                    <img src="assets/curse-vertical_lightbg.png" class="card-img-top contact" alt="CurseForge logo">
-                                    <div class="card-body info-card">
-                                        <p class="card-title element_text">CurseForge - StrikerRocker</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="card">
-                                <a href="https://www.twitch.tv/strikerrocker/">
-                                    <img src="assets/twitch.png" class="card-img-top contact" alt="CurseForge logo">
-                                    <div class="card-body info-card">
-                                        <p class="card-title element_text">Twitch - StrikerRocker</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </section>
-                </main>
+	<div id="svelte">
 
-                <div class="theme-switch-div">
-                    <p class="theme-switch-label">Dark Theme
-                        <label class="theme-switch">
-                            <input type="checkbox" id="themebox" onclick="onCheckThemeBox(false,true,'styles/light.css','styles/dark.css')">
-                                <span class="slider round"></span>
-                        </label>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script>
-        if (document.cookie == "dark=true") {
-            document.getElementById("themebox").checked = true;
-            document.querySelector("link[href='styles/light.css']").href = "styles/dark.css";
-        }
-        onCheckThemeBox(true, true, 'styles/light.css', 'styles/dark.css')
-    </script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<br>
+<ul class="justify-content-center mb-5 nav nav-pills"><li class="nav-item"><a href="/" class="nav-link active">Home</a></li><li class="nav-item"><a href="/mods" class="nav-link">My Mods</a></li><li class="nav-item"><a href="/vanillatweaks" class="nav-link">VanillaTweaks</a></li></ul>
+<div class="container"><div class="row"><td class=""><main><section><h2>About StrikerRocker</h2>
+          <br>
+          <p>I&#39;m a young developer currently learning software and web
+            development through indie game and addon development.
+          </p></section>
+        <hr>
+        <section><h2>Commissions</h2>
+          <br>
+          <p>I sometimes do modding commissions (this is highly dependent on the
+            case) contact me if you&#39;re interested.
+          </p></section>
+        <hr>
+        <section><h2>Projects</h2>
+          <br>
+          <p>Primarily focused on making mods for the game <a href="http://minecraft.net/">Minecraft</a>.
+          </p></section>
+        <hr>
+        <section><h2>Links</h2>
+          <br>
+          <div class="justify-content-center card-group"><div id="" class="bg-dark custom-card card" style=""><a href="https://www.twitter.com/strikerrocker"><img id="twitter" class="card-img-top" src="./assets/twitter_light.png" alt="Twitter logo">
+    <div class="info_card center card-body"><h5 class="card_text card-title">Twitter - StrikerRocker</h5>
+      </div></a></div>
+            <div id="" class="bg-dark custom-card card" style=""><a href="https://discord.gg/tqcqeSj"><img id="discord" class="card-img-top" src="./assets/Discord-Logo-Color.png" alt="Discord logo">
+    <div class="info_card center card-body"><h5 class="card_text card-title">Discord - StrikerRocker#7058</h5>
+      </div></a></div>
+            <div id="" class="bg-dark custom-card card" style=""><a href="https://www.github.com/strikerrocker"><img id="github" class="card-img-top" src="./assets/github_light.png" alt="Github logo">
+    <div class="info_card center card-body"><h5 class="card_text card-title">Github - StrikerRocker</h5>
+      </div></a></div>
+            <div id="" class="bg-dark custom-card card" style=""><a href="https://www.curseforge.com/members/strikerrocker/projects"><img id="curse_forge" class="card-img-top" src="./assets/curse-vertical_lightbg.png" alt="CurseForge logo">
+    <div class="info_card center card-body"><h5 class="card_text card-title">CurseForge - StrikerRocker</h5>
+      </div></a></div>
+            <div id="" class="bg-dark custom-card card" style=""><a href="https://www.twitch.tv/strikerrocker/"><img id="twitch" class="card-img-top" src="./assets/twitch.png" alt="Twitch logo">
+    <div class="info_card center card-body"><h5 class="card_text card-title">Twitch - StrikerRocker</h5>
+      </div></a></div></div></section></main>
+      <div class="s--slider svelte-t4gouc" style="font-size:20px"><span id="switch-23">Dark Theme</span>
+  <button role="switch" aria-checked aria-labelledby="switch-23" class="svelte-t4gouc"></button>
+</div></td></div></div>
+
+
+
+			
+		</div>
 </body>
 
 </html>

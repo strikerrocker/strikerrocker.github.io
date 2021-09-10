@@ -1,4 +1,55 @@
 {
+  "crafting": [
+    {
+      "id": "better_chests_recipes",
+      "name": "Better chests recipes",
+      "desc": "Adds a <strong>new</strong> recipe which allows chest to be crafted in bulk using logs.",
+      "versions": [1.15, 1.16, 1.17],
+      "fabric_versions": [1.16, 1.17]
+    },
+    {
+      "id": "nametag_recipe",
+      "name": "Recipe for nametag",
+      "desc": "Adds a recipe for nametag's using paper and iron.",
+      "versions": [1.15, 1.16, 1.17],
+      "fabric_versions": [1.16, 1.17]
+    },
+    {
+      "id": "wool_to_string_recipe",
+      "name": "Recipe for crafting wool to string",
+      "desc": "Adds in recipe to convert wool to string.",
+      "versions": [1.15, 1.16, 1.17],
+      "fabric_versions": [1.16, 1.17]
+    },
+    {
+      "id": "better_trapped_chest",
+      "name": "Better Trapped Chest Recipe",
+      "desc": "Adds an recipe for trapped chest for crafting it without chest",
+      "versions": [1.16, 1.17],
+      "fabric_versions": [1.16, 1.17]
+    },
+    {
+      "id": "repeater",
+      "name": "Better Repeater Recipe",
+      "desc": "Adds an recipe for repeater without using redstone torch but the materials needed for it",
+      "versions": [1.16, 1.17],
+      "fabric_versions": [1.16, 1.17]
+    },
+    {
+      "id": "better_stairs_recipes",
+      "name": "Better stairs recipes",
+      "desc": "Changes the recipe's for all stair to be more <strong>consistent</strong>.",
+      "versions": [1.15, 1.16],
+      "fabric_versions": []
+    },
+    {
+      "id": "better_stone_tools_recipes",
+      "name": "Better stone tools recipes",
+      "desc": "Changes the recipe's for all stone tools to use stone instead of cobblestone.",
+      "versions": [1.15, 1.16],
+      "fabric_versions": []
+    }
+  ],
   "content": [
     {
       "id": "dynamite",
@@ -53,57 +104,6 @@
       "advDesc": "Adds a new item which can be equipped in helmet slot and when equipped let's you zoom. <br> Has a baubles version when baubles is installed.",
       "versions": [1.15, 1.16],
       "fabric_versions": [1.16]
-    }
-  ],
-  "crafting": [
-    {
-      "id": "better_chests_recipes",
-      "name": "Better chests recipes",
-      "desc": "Adds a <strong>new</strong> recipe which allows chest to be crafted in bulk using logs.",
-      "versions": [1.15, 1.16, 1.17],
-      "fabric_versions": [1.16, 1.17]
-    },
-    {
-      "id": "nametag_recipe",
-      "name": "Recipe for nametag",
-      "desc": "Adds a recipe for nametag's using paper and iron.",
-      "versions": [1.15, 1.16, 1.17],
-      "fabric_versions": [1.16, 1.17]
-    },
-    {
-      "id": "wool_to_string_recipe",
-      "name": "Recipe for crafting wool to string",
-      "desc": "Adds in recipe to convert wool to string.",
-      "versions": [1.15, 1.16, 1.17],
-      "fabric_versions": [1.16, 1.17]
-    },
-    {
-      "id": "better_trapped_chest",
-      "name": "Better Trapped Chest Recipe",
-      "desc": "Adds an recipe for trapped chest for crafting it without chest",
-      "versions": [1.16, 1.17],
-      "fabric_versions": [1.16, 1.17]
-    },
-    {
-      "id": "repeater",
-      "name": "Better Repeater Recipe",
-      "desc": "Adds an recipe for repeater without using redstone torch but the materials needed for it",
-      "versions": [1.16, 1.17],
-      "fabric_versions": [1.16, 1.17]
-    },
-    {
-      "id": "better_stairs_recipes",
-      "name": "Better stairs recipes",
-      "desc": "Changes the recipe's for all stair to be more <strong>consistent</strong>.",
-      "versions": [1.15, 1.16],
-      "fabric_versions": []
-    },
-    {
-      "id": "better_stone_tools_recipes",
-      "name": "Better stone tools recipes",
-      "desc": "Changes the recipe's for all stone tools to use stone instead of cobblestone.",
-      "versions": [1.15, 1.16],
-      "fabric_versions": []
     }
   ],
   "enchanting": [
@@ -174,6 +174,29 @@
       "desc": "Creepers now has one in ten chances to drop TNT when they die.",
       "versions": [1.15, 1.16],
       "fabric_versions": []
+    }
+  ],
+  "world": [
+    {
+      "id": "less_dangerous_nether",
+      "name": "No Pesky lava pockets in the nether",
+      "desc": "Nether is Less Dangerous as there are no Lava Pockets.",
+      "versions": [1.16, 1.17],
+      "fabric_versions": [1.16, 1.17]
+    },
+    {
+      "id": "realistic_relationship",
+      "name": "Realistic predator/prey relationships!",
+      "desc": "When ocelots kill chickens, the chickens won't drop meat! Same for wolves and sheep!",
+      "versions": [1.15, 1.16, 1.17],
+      "fabric_versions": [1.16, 1.17]
+    },
+    {
+      "id": "auto_seed_planting",
+      "name": "Dropped seeds/crops now plant themselves",
+      "desc": "Farms can now be more easily automated!<br>Seeds will plant themselves after 6000 ticks(5mins). You can configure the chance and time it will take for seeds to plant.",
+      "versions": [1.15, 1.16, 1.17],
+      "fabric_versions": [1.16, 1.17]
     }
   ],
   "tweaks": [
@@ -258,7 +281,8 @@
       "desc": "Disables GUI shifting when having potion effects.",
       "versions": [1.15, 1.16, 1.17],
       "fabric_versions": []
-    },{
+    },
+    {
       "id": "higher_roman_no",
       "name": "Potion and enchantment level roman numerals now are localized up to level 255.",
       "desc": "",
@@ -300,29 +324,6 @@
       "desc": "",
       "versions": [1.15],
       "fabric_versions": []
-    }
-  ],
-  "world": [
-    {
-      "id": "less_dangerous_nether",
-      "name": "No Pesky lava pockets in the nether",
-      "desc": "Nether is Less Dangerous as there are no Lava Pockets.",
-      "versions": [1.16, 1.17],
-      "fabric_versions": [1.16, 1.17]
-    },
-    {
-      "id": "realistic_relationship",
-      "name": "Realistic predator/prey relationships!",
-      "desc": "When ocelots kill chickens, the chickens won't drop meat! Same for wolves and sheep!",
-      "versions": [1.15, 1.16, 1.17],
-      "fabric_versions": [1.16, 1.17]
-    },
-    {
-      "id": "auto_seed_planting",
-      "name": "Dropped seeds/crops now plant themselves",
-      "desc": "Farms can now be more easily automated!<br>Seeds will plant themselves after 6000 ticks(5mins). You can configure the chance and time it will take for seeds to plant.",
-      "versions": [1.15, 1.16, 1.17],
-      "fabric_versions": [1.16, 1.17]
     }
   ]
 }

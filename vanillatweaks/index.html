@@ -2,145 +2,102 @@
 <html lang="en">
 
 <head>
-    <title>VanillaTweaks</title>
-    <meta charset="utf-8">
-    <!--Meta properties-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-    <meta name="keywords" content="Minecraft Mods,VanillaTweaks,StrikerRocker,Forge,Vanilla">
-    <meta name="author" content="StrikerRocker">
-    <meta name="description" content="Want to play Modded Minecraft but like Vanilla?" />
-    <meta property="og:title" content="VanillaTweaks">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="">
-    <meta property="og:site_name" content="">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109233842-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" />
+	
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
+		
 
-        gtag('config', 'UA-109233842-1');
-    </script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="../styles/vanillatweaks/vanillatweaks.css" rel="stylesheet" type="text/css">
-    <link href="../styles/vanillatweaks/light.css" rel="stylesheet" type="text/css">
-    <link href="../styles/default.css" rel="stylesheet" type="text/css">
-    <script src="../scripts/modules.js"></script>
-    <script src="../scripts/theme.js"></script>
+		<link rel="modulepreload" href="/_app/start-df1b7bbc.js">
+		<link rel="modulepreload" href="/_app/chunks/vendor-0e3828d2.js">
+		<link rel="modulepreload" href="/_app/pages/__layout.svelte-17d039dd.js">
+		<link rel="modulepreload" href="/_app/pages/vanillatweaks.svelte-5fc06052.js">
+		<link rel="modulepreload" href="/_app/chunks/ThemeSlider-85b26c78.js">
+		<link rel="stylesheet" href="/_app/assets/start-61d1577b.css">
+		<link rel="stylesheet" href="/_app/assets/vendor-cf063f61.css">
+		<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-3a85feae.css">
+		<link rel="stylesheet" href="/_app/assets/pages/vanillatweaks.svelte-89735521.css">
+		<link rel="stylesheet" href="/_app/assets/ThemeSlider-e68f95e7.css">
+
+		<script type="module">
+			import { start } from "/_app/start-df1b7bbc.js";
+			start({
+				target: document.querySelector("#svelte"),
+				paths: {"base":"","assets":""},
+				session: {},
+				host: location.host,
+				route: true,
+				spa: false,
+				trailing_slash: "never",
+				hydrate: {
+					status: 200,
+					error: null,
+					nodes: [
+						import("/_app/pages/__layout.svelte-17d039dd.js"),
+						import("/_app/pages/vanillatweaks.svelte-5fc06052.js")
+					],
+					page: {
+						host: location.host, // TODO this is redundant
+						path: "/vanillatweaks",
+						query: new URLSearchParams(""),
+						params: {}
+					}
+				}
+			});
+		</script>
 </head>
 
 <body>
-    <div id="header">
-        <header class="container-fluid splash"></header>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12 mt-4 mb-4 text-center">
-                    <h3 class="display-1" id="title">VanillaTweaks</h3>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <nav class="nav nav-pills nav-fill justify-content-center mb-5">
-        <a class="nav-link active" id="home" onclick="setupPill(this)">Home</a>
-        <a class="nav-link" id="crafting" onclick="setupPill(this)">Crafting</a>
-        <a class="nav-link" id="content" onclick="setupPill(this)">Content</a>
-        <a class="nav-link" id="enchanting" onclick="setupPill(this)">Enchanting</a>
-        <a class="nav-link" id="loot" onclick="setupPill(this)">Loot</a>
-        <a class="nav-link" id="world" onclick="setupPill(this)">World</a>
-        <a class="nav-link" id="tweaks" onclick="setupPill(this)">Tweaks</a>
-    </nav>
-    <br>
-    <br>
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <main id="card-slot">
-                    <p>
-                        <strong>VanillaTweaks</strong> is a mod for Minecraft ported from <a
-                            href="https://minecraft.curseforge.com/projects/craft-by-anon10w1z">Craft++</a> mod. Many
-                        more feautures were added. This mod aims to enhance Minecraft without
-                        going overboard.
+	<div id="svelte">
 
-                    </p>
-                    <p>
-                        VanillaTweaks is extremely configurable. Everything from enabling and disabling enchantments to
-                        hoe as sickle can be configured straight from the config GUI, accessible from the mods menu or
-                        the game menu. It is advised to delete your config file every
-                        time you update Vanilla Tweaks, for the configuration options may have changed.
-                    </p>
-                    <p>
-                        I hope you enjoy playing this mod as much as I have enjoyed learning about modding and building
-                        it!
-                    </p>
-                    <p>
-                        <em>
-                            -- StrikerRocker
-                        </em>
-                    </p>
-                    <br>
-                    <h3>How to install</h3>
-                    <ol>
-                        <li>
-                            VanillaTweaks requires Minecraft with forge. Download the forge install from <a
-                                href="http://files.minecraftforge.net/">here</a> and run it.
-                        </li>
-                        <li>
-                            Download the latest version of VanillaTweaks from curseforge.com and put the .jar file in
-                            your mods folder. This normally lives in the same folder as your resourcepacks folder.
-                        </li>
-                        <li>
-                            Run the game from your Minecraft launcher using your <strong>new Forge</strong> profile.
-                        </li>
-                    </ol>
-                    (There are tutorials on how to set up Forge <a
-                        href="https://minecraft.gamepedia.com/Mods/Installing_Forge_mods">here</a> and <a
-                        href="https://www.wikihow.com/Install-Minecraft-Forge">here</a> if you're stuck.)
-                    <br><br><br>
-                    <h3>Links</h3>
-                    <ul>
-                        <li>
-                            <a href="https://minecraft.curseforge.com/projects/vanillatweaks">CurseForge</a>
-                        </li>
-                        <li><a href="https://github.com/StrikerRockers-Mods/VanillaTweaks/">Source code on github</a>
-                        </li>
-                        <li><a href="../contactme.html">Contact</a></li>
-                    </ul>
-                </main>
-                <div class="theme-switch-div">
-                    <p class="theme-switch-label">Dark Theme
-                        <label class="theme-switch">
-                            <input type="checkbox" id="themebox"
-                                onclick="onCheckThemeBox(false, false, '../styles/vanillatweaks/light.css', '../styles/vanillatweaks/dark.css')">
-                            <span class="slider round"></span>
-                        </label>
-                    </p>
-                </div>
-                <script>
-                    setup();
-                    if (document.cookie == "dark=true") {
-                        document.getElementById("themebox").checked = true;
-                        document.querySelector("link[href='../styles/vanillatweaks/light.css']").href = "../styles/vanillatweaks/dark.css";
-                    }
-                    onCheckThemeBox(true, false, '../styles/vanillatweaks/light.css', '../styles/vanillatweaks/dark.css')
-                </script>
-            </div>
-        </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
+
+<div id="header"><header class="container-fluid splash svelte-gq7fzv"></header>
+  <div class="container-fluid"><div class="row"><div class="col-12 mt-4 mb-5 text-center"><h3 class="display-1" id="title">VanillaTweaks</h3></div></div></div></div>
+<div class="container"><div class="row"><td class=""><ul class="nav-pills nav-fill justify-content-center mb-5 vt-nav nav"><a id="home" href="#" class="nav-link active">Home</a>
+        </ul>
+      <div id="home-module"><p><strong>VanillaTweaks</strong> is a mod for Minecraft ported from
+          <a href="https://minecraft.curseforge.com/projects/craft-by-anon10w1z" class="svelte-gq7fzv">Craft++</a> mod. Many more feautures were added. This mod aims to enhance Minecraft
+          without going overboard.
+        </p>
+        <p>VanillaTweaks is extremely configurable. Everything from enabling and
+          disabling enchantments to hoe as sickle can be configured straight
+          from the config GUI, accessible from the mods menu or the game menu.
+          It is advised to delete your config file every time you update Vanilla
+          Tweaks, for the configuration options may have changed.
+        </p>
+        <p>I hope you enjoy playing this mod as much as I have enjoyed learning
+          about modding and building it!
+        </p>
+        <p><em>-- StrikerRocker </em></p>
+        <br>
+        <h3>How to install</h3>
+        <ol><li>VanillaTweaks requires Minecraft with forge. Download the forge
+            install from <a href="http://files.minecraftforge.net/" class="svelte-gq7fzv">here</a> and
+            run it.
+          </li>
+          <li>Download the latest version of VanillaTweaks from curseforge.com and
+            put the .jar file in your mods folder. This normally lives in the
+            same folder as your resourcepacks folder.
+          </li>
+          <li>Run the game from your Minecraft launcher using your <strong>new Forge</strong> profile.
+          </li></ol>
+        (There are tutorials on how to set up Forge<a href="https://minecraft.gamepedia.com/Mods/Installing_Forge_mods" class="svelte-gq7fzv">here</a>
+        and <a href="https://www.wikihow.com/Install-Minecraft-Forge" class="svelte-gq7fzv">here</a>
+        if you&#39;re stuck.)
+        <br><br><br>
+        <h3>Links</h3>
+        <ul><li><a href="https://minecraft.curseforge.com/projects/vanillatweaks" class="svelte-gq7fzv">CurseForge</a></li>
+          <li><a href="https://github.com/StrikerRockers-Mods/VanillaTweaks/" class="svelte-gq7fzv">Source code on github</a></li></ul></div>
+      
+      <div class="s--slider svelte-t4gouc" style="font-size:20px"><span id="switch-0">Dark Theme</span>
+  <button role="switch" aria-checked aria-labelledby="switch-0" class="svelte-t4gouc"></button>
+</div></td></div></div>
+
+
+
+			
+		</div>
 </body>
 
 </html>

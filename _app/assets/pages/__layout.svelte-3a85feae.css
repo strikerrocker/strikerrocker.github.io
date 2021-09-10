@@ -1,0 +1,1 @@
+.container{max-width:1140px}body:not(.dark){background-color:azure}body.dark{background-color:#003c3c;color:#fff}.card a{text-decoration:none}.card-body{font-size:.75rem}.center.card-body{text-align:center}.card.bg-dark a{color:#fff}.card:hover{transform:scale(1.05)}.card{margin:10px;border-radius:5px;-webkit-transition-duration:.25s;transition-duration:.25s}

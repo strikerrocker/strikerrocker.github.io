@@ -49,7 +49,7 @@
       "name": "Furnace XP Drop",
       "api": "https://api.cfwidget.com/309105",
       "link": "https://www.curseforge.com/minecraft/mc-mods/furnace-xp-drop-fabric",
-      "logo-type": ".gif"
+      "logo_type": ".gif"
     },
     {
       "id": "craftingpad",
@@ -65,7 +65,7 @@
     },
     {
       "id": "stitched-snow",
-      "name": "VanillaTweaks",
+      "name": "Stiched Snow",
       "api": "https://api.cfwidget.com/430610",
       "link": "https://www.curseforge.com/minecraft/mc-mods/stitchedsnow"
     }
