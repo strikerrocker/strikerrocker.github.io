@@ -2,28 +2,18 @@
   import Nav from "$lib/Nav.svelte";
   import ThemeSlider from "$lib/ThemeSlider.svelte";
   import { CardGroup, Column, Container, Row } from "sveltestrap";
-  import { onMount } from "svelte";
   import SmallCard from "$lib/SmallCard.svelte";
   import { httpGet, httpGetElement } from "./__layout.svelte";
 
   let json = null;
   let modloader = ["forge", "fabric"];
-  let updatedDownloads = false;
-  onMount(() => {
-    httpGet( "/assets/mods/mods.json", ( response) => {
+
+  let promise = load();
+
+  async function load() {
+    await httpGet("/assets/mods/mods.json", (response) => {
       json = JSON.parse(response);
     });
-    const interval = setInterval(() => {
-      if (json != null) {
-        if (updatedDownloads == false) {
-          onLoad();
-          updatedDownloads = true;
-        }
-      }
-    }, 1000);
-  });
-
-  function onLoad() {
     var elements = document.getElementsByClassName("element");
     var array = Array.from(elements);
     array.forEach(getDataForElement);
@@ -54,47 +44,37 @@
 <Container>
   <Row>
     <Column>
-      <h1 id="title">My Mods</h1>
-      {#each modloader as loader, i}
-        <h3><u>Mods for {loader}</u></h3>
-        <CardGroup class="justify-content-center" id={loader}>
-          {#if json != undefined}
-            {#each json[loader] as mod, i}
-              <SmallCard
-                id={mod["id"]}
-                api={mod["api"]}
-                href={mod["link"]}
-                src={"/assets/mods/" +
-                  mod["id"] +
-                  (mod["logo_type"] != null ? mod["logo_type"] : ".png")}
-                alt={mod["name"] + " Logo"}
-                title={mod["name"]}
-                text="? Downloads"
-              />
-            {/each}
-          {/if}
-        </CardGroup>
-      {/each}
-      <!--Happens too fast find a better spot-->
+      {#await promise}
+        Loading the page please wait
+      {:then result}
+        <h1 id="title">My Mods</h1>
+        {#each modloader as loader, i}
+          <h3><u>Mods for {loader}</u></h3>
+          <CardGroup class="justify-content-center" id={loader}>
+            {#if json != undefined}
+              {#each json[loader] as mod, i}
+                <SmallCard
+                  id={mod["id"]}
+                  api={mod["api"]}
+                  href={mod["link"]}
+                  src={"/assets/mods/" +
+                    mod["id"] +
+                    (mod["logo_type"] != null ? mod["logo_type"] : ".png")}
+                  alt={mod["name"] + " Logo"}
+                  title={mod["name"]}
+                  text="? Downloads"
+                />
+              {/each}
+            {/if}
+          </CardGroup>
+        {/each}
+      {/await}
       <ThemeSlider />
     </Column>
   </Row>
 </Container>
 
 <style>
-  :global(.container) {
-    max-width: 1140px;
-  }
-
-  :global(body:not(.dark)) {
-    background-color: azure;
-  }
-
-  :global(body.dark) {
-    background-color: #003c3c;
-    color: white;
-  }
-
   h1 {
     text-align: center;
   }

@@ -18,7 +18,7 @@ import { writable } from "svelte/store";
     xmlHttp.send();
   }
 
-  export function httpGet(url , callback){
+  export async function httpGet(url , callback){
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function () {
       if (xmlHttp.readyState == 4 && xmlHttp.status == 200)

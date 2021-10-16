@@ -43,7 +43,7 @@
                   "/" +
                   feature["id"] +
                   ".png"}
-                alt={"Represents" + feature["name"]}
+                alt={"Represents " + feature["name"]}
                 class=" m-sm-2"
                 on:error={removeImageRegion}
               />
@@ -53,7 +53,7 @@
               <video
               class=" m-sm-2"
                 on:error={removeImageRegion}
-                loop=""
+                loop
                 on:mouseover={play}
                 on:mouseout={pause}
                 width="267"
@@ -112,7 +112,7 @@
 
   :global(.card img) {
     width: 100%;
-    height: max-content;
+    height: auto;
   }
 
   :global(.badge) {
@@ -121,6 +121,10 @@
 
   :global(.bg-dark .badge) {
     color: #323232;
+  }
+
+  video{
+    height:max-content;
   }
 
   @media (min-width: 768px) {

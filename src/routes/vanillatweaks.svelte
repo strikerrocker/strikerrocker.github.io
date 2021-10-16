@@ -1,25 +1,22 @@
 <script>
   import ThemeSlider from "$lib/ThemeSlider.svelte";
   import VtModule from "$lib/WikiModule.svelte";
-  import { onMount } from "svelte";
   import { Column, Container, Nav, NavLink, Row } from "sveltestrap";
   import { httpGet } from "./__layout.svelte";
 
-  var headerHTML = "";
   var moduleJson;
   var modules = null;
+  let promise = load();
 
-  onMount(() => {
-    //homeHTML = document.getElementById("card-slot").innerHTML;
-    //headerHTML = document.getElementById("header").innerHTML;
-    httpGet("/assets/vanillatweaks/features.json", (response) => {
+  async function load() {
+    await httpGet("/assets/vanillatweaks/features.json", (response) => {
       moduleJson = JSON.parse(response);
       modules = [];
       for (var module in moduleJson) {
         modules.push(module);
       }
     });
-  });
+  }
 
   function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
@@ -131,9 +128,11 @@
         </ul>
       </div>
       {#if modules != null && moduleJson != null}
-        {#each modules as id}
-          <VtModule moduleName={id} json={moduleJson[id]} />
-        {/each}
+        {#await promise then result}
+          {#each modules as id}
+            <VtModule moduleName={id} json={moduleJson[id]} />
+          {/each}
+        {/await}
       {/if}
       <ThemeSlider />
     </Column>
