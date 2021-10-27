@@ -4,26 +4,35 @@
   import { CardGroup, Column, Container, Row } from "sveltestrap";
   import SmallCard from "$lib/SmallCard.svelte";
   import { httpGet, httpGetElement } from "./__layout.svelte";
+  import { afterUpdate, tick } from "svelte";
 
   let json = null;
   let modloader = ["forge", "fabric"];
 
   let promise = load();
+  let updatedDownloads = false;
 
   async function load() {
-    await httpGet("/assets/mods/mods.json", (response) => {
+    await httpGet("assets/mods/mods.json", (response) => {
       json = JSON.parse(response);
     });
-    var elements = document.getElementsByClassName("element");
-    var array = Array.from(elements);
-    array.forEach(getDataForElement);
   }
+
+  afterUpdate(() => {
+    if (!updatedDownloads) {
+      var elements = document.getElementsByClassName("element");
+      var array = Array.from(elements);
+      array.forEach(getDataForElement);
+      console.log("Calling")
+    }
+  });
 
   function getDataForElement(element) {
     var id = element.id;
     if (id != "") {
       httpGetElement(element, element.getAttribute("api"), fillInfoForResponse);
     }
+    updatedDownloads=true
   }
 
   function fillInfoForResponse(element, response) {
@@ -54,11 +63,11 @@
             {#if json != undefined}
               {#each json[loader] as mod, i}
                 <SmallCard
-                  id={mod["id"]}
-                  api={mod["api"]}
+                  id={mod["slug"]}
+                  api={"https://api.cfwidget.com/"+mod["cf_id"]}
                   href={mod["link"]}
                   src={"/assets/mods/" +
-                    mod["id"] +
+                    mod["slug"] +
                     (mod["logo_type"] != null ? mod["logo_type"] : ".png")}
                   alt={mod["name"] + " Logo"}
                   title={mod["name"]}

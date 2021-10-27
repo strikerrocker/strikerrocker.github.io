@@ -19,7 +19,7 @@
 
 <Card class={classes} id={small == true ? "" : id} {api}>
   <a {href}>
-    <CardImg top {src} {id} {alt} />
+    <CardImg top {src} {alt} />
     <CardBody class={small === true ? "info_card center" : "mod_card center"}>
       <CardTitle class="card_text">{title}</CardTitle>
       {#if text != null}
