@@ -1,73 +1,91 @@
 {
   "forge": [
     {
-      "id": "vanillatweaks",
+      "slug": "vanillatweaks",
       "name": "VanillaTweaks",
-      "api": "https://api.cfwidget.com/272637",
+      "cf_id": 272637,
       "link": "https://www.curseforge.com/minecraft/mc-mods/vanillatweaks"
     },
     {
-      "id": "sbm-jukebox",
+      "slug": "sbm-jukebox",
       "name": "[SBM] Jukebox",
-      "api": "https://api.cfwidget.com/292430",
+      "cf_id": 292430,
       "link": "https://www.curseforge.com/minecraft/mc-mods/sbm-jukebox"
     },
     {
-      "id": "sbm-cardboardboxes",
+      "slug": "sbm-cardboardboxes",
       "name": "[SBM] Cardboard Boxes",
-      "api": "https://api.cfwidget.com/248343",
+      "cf_id": 248343,
       "link": "https://www.curseforge.com/minecraft/mc-mods/sbm-cardboardboxes"
     },
     {
-      "id": "sbm-magic-mirror",
+      "slug": "sbm-magic-mirror",
       "name": "[SBM] Magic Mirror",
-      "api": "https://api.cfwidget.com/250881",
+      "cf_id": 250881,
       "link": "https://www.curseforge.com/minecraft/mc-mods/sbm-magic-mirror"
     },
     {
-      "id": "limited-spawners",
+      "slug": "limited-spawners",
       "name": "Limited Spawners",
-      "api": "https://api.cfwidget.com/410922",
+      "cf_id": 410922,
       "link": "https://www.curseforge.com/minecraft/mc-mods/limited-spawners"
     }
   ],
   "fabric": [
     {
-      "id": "vanillatweaks",
+      "slug": "vanillatweaks",
       "name": "VanillaTweaks",
-      "api": "https://api.cfwidget.com/428252",
+      "cf_id": 428252,
       "link": "https://www.curseforge.com/minecraft/mc-mods/vanillatweaks-fabric"
     },
     {
-      "id": "clear-despawn",
+      "slug": "clear-despawn",
       "name": "Clear Despawn",
-      "api": "https://api.cfwidget.com/308793",
+      "cf_id": 308793,
       "link": "https://www.curseforge.com/minecraft/mc-mods/clear-despawn-fabric"
     },
     {
-      "id": "furnace-xp-drop",
+      "slug": "furnace-xp-drop",
       "name": "Furnace XP Drop",
-      "api": "https://api.cfwidget.com/309105",
+      "cf_id": 309105,
       "link": "https://www.curseforge.com/minecraft/mc-mods/furnace-xp-drop-fabric",
       "logo_type": ".gif"
     },
     {
-      "id": "craftingpad",
+      "slug": "craftingpad",
       "name": "Crafting Pad",
-      "api": "https://api.cfwidget.com/308976",
+      "cf_id": 308976,
       "link": "https://www.curseforge.com/minecraft/mc-mods/craftingpad-fabric"
     },
     {
-      "id": "limited-spawners",
+      "slug": "limited-spawners",
       "name": "Limited Spawners",
-      "api": "https://api.cfwidget.com/429084",
+      "cf_id": 429084,
       "link": "https://www.curseforge.com/minecraft/mc-mods/limited-spawner-fabric"
     },
     {
-      "id": "stitched-snow",
+      "slug": "stitched-snow",
       "name": "Stiched Snow",
-      "api": "https://api.cfwidget.com/430610",
+      "cf_id": 430610,
       "link": "https://www.curseforge.com/minecraft/mc-mods/stitchedsnow"
+    },
+    {
+      "slug": "paintings",
+      "name": "Paintings++",
+      "cf_id": 517702,
+      "link": "https://www.curseforge.com/minecraft/mc-mods/paintings-fabric-edition"
+    },
+    {
+      "slug": "bad-to-the-bone",
+      "name": "Bad to the Bone",
+      "cf_id": 535546,
+      "link": "https://www.curseforge.com/minecraft/mc-mods/bad-to-the-bone-fabric"
+    },
+    {
+      "slug": "sbm-jukebox",
+      "name": "[SBM] Jukebox",
+      "cf_id": 523502,
+      "link": "https://www.curseforge.com/minecraft/mc-mods/sbm-jukebox-fabric"
     }
   ]
 }
