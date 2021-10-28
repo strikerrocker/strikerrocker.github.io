@@ -12,9 +12,25 @@
   let promise = load();
   let updatedDownloads = false;
 
+  const chunk = (arr, size) =>
+    arr.reduce(
+      (acc, e, i) => (
+        i % size ? acc[acc.length - 1].push(e) : acc.push([e]), acc
+      ),
+      []
+    );
+
+  let fabric_mods_list;
+  let forge_mods_list;
+  let mods;
+
   async function load() {
     await httpGet("../assets/mods/mods.json", (response) => {
       json = JSON.parse(response);
+      fabric_mods_list = chunk(json["fabric"], 5);
+      forge_mods_list = chunk(json["forge"], 5);
+      mods = { fabric: fabric_mods_list, forge: forge_mods_list };
+      console.log(mods);
     });
   }
 
@@ -31,7 +47,7 @@
     if (id != "") {
       httpGetElement(element, element.getAttribute("api"), fillInfoForResponse);
     }
-    updatedDownloads=true
+    updatedDownloads = true;
   }
 
   function fillInfoForResponse(element, response) {
@@ -56,25 +72,27 @@
         Loading the page please wait
       {:then result}
         <h1 id="title">My Mods</h1>
-        {#each modloader as loader, i}
+        {#each modloader as loader}
           <h3><u>Mods for {loader}</u></h3>
-          <CardGroup class="justify-content-center" id={loader}>
-            {#if json != undefined}
-              {#each json[loader] as mod, i}
-                <SmallCard
-                  id={mod["slug"]}
-                  api={"https://api.cfwidget.com/"+mod["cf_id"]}
-                  href={mod["link"]}
-                  src={"/assets/mods/" +
-                    mod["slug"] +
-                    (mod["logo_type"] != null ? mod["logo_type"] : ".png")}
-                  alt={mod["name"] + " Logo"}
-                  title={mod["name"]}
-                  text="? Downloads"
-                />
-              {/each}
-            {/if}
-          </CardGroup>
+          {#if json != undefined}
+            {#each mods[loader] as grp, i}
+              <CardGroup class="justify-content-center" id={loader + i}>
+                {#each grp as mod}
+                  <SmallCard
+                    id={mod["slug"]}
+                    api={"https://api.cfwidget.com/" + mod["cf_id"]}
+                    href={mod["link"]}
+                    src={"/assets/mods/" +
+                      mod["slug"] +
+                      (mod["logo_type"] != null ? mod["logo_type"] : ".png")}
+                    alt={mod["name"] + " Logo"}
+                    title={mod["name"]}
+                    text="? Downloads"
+                  />
+                {/each}
+              </CardGroup>
+            {/each}
+          {/if}
         {/each}
       {/await}
       <ThemeSlider />
