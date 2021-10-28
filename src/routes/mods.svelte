@@ -13,7 +13,7 @@
   let updatedDownloads = false;
 
   async function load() {
-    await httpGet("assets/mods/mods.json", (response) => {
+    await httpGet("../assets/mods/mods.json", (response) => {
       json = JSON.parse(response);
     });
   }
@@ -23,7 +23,6 @@
       var elements = document.getElementsByClassName("element");
       var array = Array.from(elements);
       array.forEach(getDataForElement);
-      console.log("Calling")
     }
   });
 
