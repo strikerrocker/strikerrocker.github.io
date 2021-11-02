@@ -10,7 +10,7 @@
 
   async function load() {
     await httpGet("/assets/vanillatweaks/features.json", (response) => {
-      moduleJson = JSON.parse(response);
+      moduleJson = response;
       modules = [];
       for (var module in moduleJson) {
         modules.push(module);

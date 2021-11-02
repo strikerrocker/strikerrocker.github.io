@@ -1,34 +1,36 @@
+<script context="module">
+  export function httpGetElement(element, theUrl, callback) {
+    fetch(theUrl)
+      .then((response) => {
+        return response.json();
+      }).then(data=>{
+        callback(element,data);
+      })
+      .catch((error) => console.log(error));
+  }
+
+  export async function httpGet(url, callback) {
+    fetch(url)
+      .then((response) => {
+        return response.json();
+      }).then(data=>{
+        callback(data);
+      })
+      .catch((error) => console.log(error));
+  }
+</script>
+
 <script>
-import { setContext } from "svelte";
+  import { setContext } from "svelte";
 
-import { writable } from "svelte/store";
-
+  import { writable } from "svelte/store";
 
   let currentTheme = writable("light");
   setContext("current-theme", currentTheme);
 </script>
-<script context="module">
-  export function httpGetElement(element, theUrl, callback) {
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.onreadystatechange = function () {
-      if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
-        callback(element, xmlHttp.responseText);
-    };
-    xmlHttp.open("GET", theUrl, true);
-    xmlHttp.send();
-  }
 
-  export async function httpGet(url , callback){
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.onreadystatechange = function () {
-      if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
-        callback(xmlHttp.responseText);
-    };
-    xmlHttp.open("GET", url, true);
-    xmlHttp.send();
-  }
-</script>
-<slot></slot>
+<slot />
+
 <style>
   :global(.container) {
     max-width: 1140px;
@@ -43,19 +45,19 @@ import { writable } from "svelte/store";
     color: white;
   }
 
-  :global(.card a){
+  :global(.card a) {
     text-decoration: none;
   }
 
-  :global(.card-body){
+  :global(.card-body) {
     font-size: 0.75rem;
   }
 
-  :global(.center.card-body){
+  :global(.center.card-body) {
     text-align: center;
   }
 
-  :global(.card.bg-dark a){
+  :global(.card.bg-dark a) {
     color: white;
   }
 

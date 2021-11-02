@@ -4,7 +4,7 @@
   import { CardGroup, Column, Container, Row } from "sveltestrap";
   import SmallCard from "$lib/SmallCard.svelte";
   import { httpGet, httpGetElement } from "./__layout.svelte";
-  import { afterUpdate, tick } from "svelte";
+  import { afterUpdate } from "svelte";
 
   let json = null;
   let modloader = ["forge", "fabric"];
@@ -25,12 +25,11 @@
   let mods;
 
   async function load() {
-    await httpGet("../assets/mods/mods.json", (response) => {
-      json = JSON.parse(response);
+    await httpGet("/assets/mods/mods.json", (response) => {
+      json = response;
       fabric_mods_list = chunk(json["fabric"], 5);
       forge_mods_list = chunk(json["forge"], 5);
       mods = { fabric: fabric_mods_list, forge: forge_mods_list };
-      console.log(mods);
     });
   }
 
@@ -54,9 +53,8 @@
     var downloads = element.querySelectorAll(
       "div#" + element.id + " .card-text"
     );
-    var obj = JSON.parse(response);
     downloads[0].innerHTML =
-      numberWithCommas(obj.downloads.total) + " Downloads";
+      numberWithCommas(response.downloads.total) + " Downloads";
   }
 
   function numberWithCommas(x) {
