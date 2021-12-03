@@ -13,14 +13,22 @@
   // Responsible for setting the theme
   let currentTheme = getContext("currentTheme");
   let classes = small === true ? "" : "element ";
-  classes = classes  + (currentTheme === "light" ? "bg-light" : "bg-dark");
+  classes = classes + (currentTheme === "light" ? "bg-light" : "bg-dark");
   classes = classes + " custom-card";
+  let imgcss = "border-top-left-radius:20px;border-top-right-radius:20px;";
+  let bodycss =
+    "border-bottom-left-radius:20px;border-bottom-right-radius:20px;";
 </script>
 
-<Card class={classes} id={small == true ? "" : id} {api}>
+<Card class={classes} id={small == true ? "" : id} {api} style="border-radius:20px;">
   <a {href}>
-    <CardImg top {src} {alt} />
-    <CardBody class={small === true ? "info_card center" : "mod_card center"}>
+    <CardImg top {src} {alt} style={imgcss} />
+
+    <CardBody
+      class={small === true ? "info_card center" : "mod_card center"}
+      style={bodycss}
+    >
+    
       <CardTitle class="card_text">{title}</CardTitle>
       {#if text != null}
         <CardText>{text}</CardText>
