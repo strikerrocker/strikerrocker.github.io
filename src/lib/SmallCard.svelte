@@ -21,7 +21,7 @@
 </script>
 
 <Card class={classes} id={small == true ? "" : id} {api} style="border-radius:20px;">
-  <a {href}>
+  <a {href} target="_blank">
     <CardImg top {src} {alt} style={imgcss} />
 
     <CardBody
