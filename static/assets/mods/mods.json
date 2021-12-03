@@ -45,13 +45,6 @@
       "link": "https://www.curseforge.com/minecraft/mc-mods/clear-despawn-fabric"
     },
     {
-      "slug": "furnace-xp-drop",
-      "name": "Furnace XP Drop",
-      "cf_id": 309105,
-      "link": "https://www.curseforge.com/minecraft/mc-mods/furnace-xp-drop-fabric",
-      "logo_type": ".gif"
-    },
-    {
       "slug": "craftingpad",
       "name": "Crafting Pad",
       "cf_id": 308976,
@@ -62,12 +55,6 @@
       "name": "Limited Spawners",
       "cf_id": 429084,
       "link": "https://www.curseforge.com/minecraft/mc-mods/limited-spawner-fabric"
-    },
-    {
-      "slug": "stitched-snow",
-      "name": "Stiched Snow",
-      "cf_id": 430610,
-      "link": "https://www.curseforge.com/minecraft/mc-mods/stitchedsnow"
     },
     {
       "slug": "paintings",
