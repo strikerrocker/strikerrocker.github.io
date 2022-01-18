@@ -34,9 +34,6 @@
             element.querySelectorAll(
               "div#" + element.id + " .card-text"
             )[0].innerHTML = numberWithCommas(res.downloadCount) + " Downloads";
-            element.querySelectorAll(
-              "div#" + element.id + " .card-title"
-            )[0].innerHTML = res.name;
           });
         updatedDownloads = true;
       });
