@@ -1,5 +1,6 @@
 <script>
-  import { getContext, onMount } from "svelte";
+  import { currentPageTheme } from "../routes/__layout.svelte";
+  import { onMount } from "svelte";
 
   const STORAGE_KEY = "theme";
   const DARK_PREFERENCE = "(prefers-color-scheme: dark)";
@@ -8,8 +9,8 @@
     DARK: "dark",
     LIGHT: "light",
   };
-  let currentTheme = getContext('current-theme');
-  //$: $currentTheme = () => window.matchMedia(DARK_PREFERENCE).matches;
+  let currentTheme;
+  currentPageTheme.subscribe((value) => (currentTheme = value));
 
   const prefersDarkThemes = () => window.matchMedia(DARK_PREFERENCE).matches;
 
@@ -17,13 +18,15 @@
     const preferredTheme = prefersDarkThemes() ? THEMES.DARK : THEMES.LIGHT;
 
     currentTheme = localStorage.getItem(STORAGE_KEY) ?? preferredTheme;
-
+    currentPageTheme.set(currentTheme);
     if (currentTheme === THEMES.DARK) {
       document.body.classList.remove(THEMES.LIGHT);
       document.body.classList.add(THEMES.DARK);
+      checked = true;
     } else {
       document.body.classList.remove(THEMES.DARK);
       document.body.classList.add(THEMES.LIGHT);
+      checked = false;
     }
     switchCardColor();
     switchLogo();
@@ -46,9 +49,6 @@
 
     applyTheme();
   }
-
-  let label = "Dark Theme";
-  let fontSize = 20;
 
   let checked = true;
 
@@ -96,8 +96,8 @@
   });
 </script>
 
-<div class="s--slider" style="font-size:{fontSize}px">
-  <span id={`switch-${uniqueID}`}>{label}</span>
+<div class="s--slider" style="font-size:20px">
+  <span id={`switch-${uniqueID}`}>Dark Theme</span>
   <button
     role="switch"
     aria-checked={checked}

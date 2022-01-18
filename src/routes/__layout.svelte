@@ -1,32 +1,18 @@
 <script context="module">
-  export function httpGetElement(element, theUrl, callback) {
-    fetch(theUrl)
-      .then((response) => {
-        return response.json();
-      }).then(data=>{
-        callback(element,data);
-      })
-      .catch((error) => console.log(error));
-  }
+  import { writable } from "svelte/store";
 
   export async function httpGet(url, callback) {
     fetch(url)
       .then((response) => {
         return response.json();
-      }).then(data=>{
+      })
+      .then((data) => {
         callback(data);
       })
       .catch((error) => console.log(error));
   }
-</script>
 
-<script>
-  import { setContext } from "svelte";
-
-  import { writable } from "svelte/store";
-
-  let currentTheme = writable("light");
-  setContext("current-theme", currentTheme);
+  export const currentPageTheme = writable("light");
 </script>
 
 <slot />

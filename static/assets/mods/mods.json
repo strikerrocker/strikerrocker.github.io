@@ -13,12 +13,6 @@
       "link": "https://www.curseforge.com/minecraft/mc-mods/sbm-jukebox"
     },
     {
-      "slug": "sbm-cardboardboxes",
-      "name": "[SBM] Cardboard Boxes",
-      "cf_id": 248343,
-      "link": "https://www.curseforge.com/minecraft/mc-mods/sbm-cardboardboxes"
-    },
-    {
       "slug": "sbm-magic-mirror",
       "name": "[SBM] Magic Mirror",
       "cf_id": 250881,
@@ -59,8 +53,8 @@
     {
       "slug": "paintings",
       "name": "Paintings++",
-      "cf_id": 517702,
-      "link": "https://www.curseforge.com/minecraft/mc-mods/paintings-fabric-edition"
+      "cf_id": 252042,
+      "link": "https://www.curseforge.com/minecraft/mc-mods/paintings"
     },
     {
       "slug": "bad-to-the-bone",

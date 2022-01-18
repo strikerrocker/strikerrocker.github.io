@@ -132,9 +132,10 @@
           {#each modules as id}
             <VtModule moduleName={id} json={moduleJson[id]} />
           {/each}
+          <ThemeSlider />
         {/await}
       {/if}
-      <ThemeSlider />
+      
     </Column>
   </Row>
 </Container>

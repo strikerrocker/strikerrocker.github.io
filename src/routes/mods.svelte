@@ -1,9 +1,9 @@
 <script>
   import Nav from "$lib/Nav.svelte";
   import ThemeSlider from "$lib/ThemeSlider.svelte";
-  import { CardGroup, Column, Container, Row } from "sveltestrap";
+  import { Column, Container, Row } from "sveltestrap";
   import SmallCard from "$lib/SmallCard.svelte";
-  import { httpGet, httpGetElement } from "./__layout.svelte";
+  import { httpGet } from "./__layout.svelte";
   import { afterUpdate } from "svelte";
 
   let json = null;
@@ -23,26 +23,25 @@
   afterUpdate(() => {
     if (!updatedDownloads) {
       var elements = document.getElementsByClassName("element");
-      var array = Array.from(elements);
-      array.forEach(getDataForElement);
+      Array.from(elements).forEach(async (element) => {
+        var cf_id = element.getAttribute("cf_id");
+        await fetch(
+          "https://cf-download-monitor.vercel.app/api/project_data?projectID=" +
+            cf_id
+        )
+          .then((res) => res.json())
+          .then((res) => {
+            element.querySelectorAll(
+              "div#" + element.id + " .card-text"
+            )[0].innerHTML = numberWithCommas(res.downloadCount) + " Downloads";
+            element.querySelectorAll(
+              "div#" + element.id + " .card-title"
+            )[0].innerHTML = res.name;
+          });
+        updatedDownloads = true;
+      });
     }
   });
-
-  function getDataForElement(element) {
-    var id = element.id;
-    if (id != "") {
-      httpGetElement(element, element.getAttribute("api"), fillInfoForResponse);
-    }
-    updatedDownloads = true;
-  }
-
-  function fillInfoForResponse(element, response) {
-    var downloads = element.querySelectorAll(
-      "div#" + element.id + " .card-text"
-    );
-    downloads[0].innerHTML =
-      numberWithCommas(response.downloads.total) + " Downloads";
-  }
 
   function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -65,7 +64,6 @@
                 <Column>
                   <SmallCard
                     id={mod["slug"]}
-                    api={"https://api.cfwidget.com/" + mod["cf_id"]}
                     href={mod["link"]}
                     src={"/assets/mods/" +
                       mod["slug"] +
@@ -73,14 +71,15 @@
                     alt={mod["name"] + " Logo"}
                     title={mod["name"]}
                     text="? Downloads"
+                    cf_id={mod["cf_id"]}
                   />
                 </Column>
               {/each}
             </Row>
           {/if}
         {/each}
+        <ThemeSlider />
       {/await}
-      <ThemeSlider />
     </Column>
   </Row>
 </Container>

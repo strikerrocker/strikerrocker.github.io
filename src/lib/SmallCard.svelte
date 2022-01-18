@@ -1,5 +1,5 @@
 <script>
-  import { getContext } from "svelte";
+  import { currentPageTheme } from "../routes/__layout.svelte";
 
   import { Card, CardBody, CardImg, CardText, CardTitle } from "sveltestrap";
   export let href;
@@ -9,9 +9,10 @@
   export let text = undefined;
   export let id;
   export let alt;
-  export let api = undefined;
+  export let cf_id = undefined;
   // Responsible for setting the theme
-  let currentTheme = getContext("currentTheme");
+  let currentTheme;
+  currentPageTheme.subscribe((value) => (currentTheme = value));
   let classes = small === true ? "" : "element ";
   classes = classes + (currentTheme === "light" ? "bg-light" : "bg-dark");
   classes = classes + " custom-card";
@@ -20,7 +21,12 @@
     "border-bottom-left-radius:20px;border-bottom-right-radius:20px;";
 </script>
 
-<Card class={classes} id={small == true ? "" : id} {api} style="border-radius:20px;">
+<Card
+  class={classes}
+  id={small == true ? "" : id}
+  {cf_id}
+  style="border-radius:20px;"
+>
   <a {href} target="_blank">
     <CardImg top {src} {alt} style={imgcss} />
 
@@ -28,7 +34,6 @@
       class={small === true ? "info_card center" : "mod_card center"}
       style={bodycss}
     >
-    
       <CardTitle class="card_text">{title}</CardTitle>
       {#if text != null}
         <CardText>{text}</CardText>
@@ -64,6 +69,4 @@
   :global(.dark .custom-card .card-body) {
     background-color: black;
   }
-
-  
 </style>
