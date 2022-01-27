@@ -5,49 +5,38 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" />
-	
-
-		
-
-		<link rel="modulepreload" href="/_app/start-89f564f6.js">
-		<link rel="modulepreload" href="/_app/chunks/vendor-d5d50c33.js">
-		<link rel="modulepreload" href="/_app/pages/__layout.svelte-2d97e58a.js">
-		<link rel="modulepreload" href="/_app/pages/mods.svelte-6a3cfaa4.js">
-		<link rel="modulepreload" href="/_app/chunks/SmallCard-15412d03.js">
-		<link rel="modulepreload" href="/_app/chunks/ThemeSlider-bd8f6231.js">
-		<link rel="stylesheet" href="/_app/assets/start-61d1577b.css">
-		<link rel="stylesheet" href="/_app/assets/vendor-cf063f61.css">
-		<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-3a85feae.css">
-		<link rel="stylesheet" href="/_app/assets/pages/mods.svelte-9606c128.css">
-		<link rel="stylesheet" href="/_app/assets/SmallCard-a1f30d3e.css">
-		<link rel="stylesheet" href="/_app/assets/ThemeSlider-e68f95e7.css">
-
-		<script type="module">
-			import { start } from "/_app/start-89f564f6.js";
-			start({
-				target: document.querySelector("#svelte"),
-				paths: {"base":"","assets":""},
-				session: {},
-				host: location.host,
-				route: true,
-				spa: false,
-				trailing_slash: "never",
-				hydrate: {
-					status: 200,
-					error: null,
-					nodes: [
-						import("/_app/pages/__layout.svelte-2d97e58a.js"),
-						import("/_app/pages/mods.svelte-6a3cfaa4.js")
-					],
-					page: {
-						host: location.host, // TODO this is redundant
-						path: "/mods",
-						query: new URLSearchParams(""),
-						params: {}
-					}
-				}
-			});
-		</script>
+	<meta http-equiv="content-security-policy" content="">
+	<link rel="stylesheet" href="/_app/assets/vendor-28d9e71a.css">
+	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-3a85feae.css">
+	<link rel="stylesheet" href="/_app/assets/pages/mods.svelte-9606c128.css">
+	<link rel="stylesheet" href="/_app/assets/SmallCard-a1f30d3e.css">
+	<link rel="stylesheet" href="/_app/assets/ThemeSlider-e68f95e7.css">
+	<link rel="modulepreload" href="/_app/start-b9b71618.js">
+	<link rel="modulepreload" href="/_app/chunks/vendor-5bc27e00.js">
+	<link rel="modulepreload" href="/_app/pages/__layout.svelte-d3434455.js">
+	<link rel="modulepreload" href="/_app/pages/mods.svelte-cc243a29.js">
+	<link rel="modulepreload" href="/_app/chunks/SmallCard-c4824086.js">
+	<link rel="modulepreload" href="/_app/chunks/ThemeSlider-226a4c30.js"><script type="module">
+		import { start } from "/_app/start-b9b71618.js";
+		start({
+			target: document.querySelector("#svelte"),
+			paths: {"base":"","assets":""},
+			session: {},
+			route: true,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [
+					import("/_app/pages/__layout.svelte-d3434455.js"),
+						import("/_app/pages/mods.svelte-cc243a29.js")
+				],
+				url: new URL("http://sveltekit-prerender/mods"),
+				params: {}
+			}
+		});
+	</script>
 </head>
 
 <body>
@@ -60,10 +49,7 @@
         Loading the page please wait
       </td></div></div>
 
-
-
-			
-		</div>
+</div>
 </body>
 
 </html>
