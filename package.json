@@ -9,10 +9,10 @@
     "deploy": "npm run build && npx gh-pages -d build -t true"
   },
   "devDependencies": {
-    "@sveltejs/adapter-static": "^1.0.0-next.18",
-    "@sveltejs/kit": "next",
+    "@sveltejs/adapter-static": "^1.0.0-next.26",
+    "@sveltejs/kit": "^1.0.0-next.247",
     "gh-pages": "^3.2.3",
-    "svelte": "^3.42.4",
+    "svelte": "^3.46.3",
     "trash-cli": "^4.0.0"
   },
   "type": "module",
@@ -20,8 +20,8 @@
   "author": "StrikerRocker",
   "license": "MIT",
   "dependencies": {
-    "svelte-preprocess": "^4.9.2",
-    "sveltestrap": "^5.6.3",
+    "svelte-preprocess": "^4.10.2",
+    "sveltestrap": "^5.8.3",
     "touch": "^3.1.0"
   }
 }
