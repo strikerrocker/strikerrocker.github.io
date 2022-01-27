@@ -26,14 +26,13 @@
       Array.from(elements).forEach(async (element) => {
         var cf_id = element.getAttribute("cf_id");
         await fetch(
-          "https://cf-download-monitor.vercel.app/api/project_data?projectID=" +
-            cf_id
+          "https://cf-download-monitor.vercel.app/api/v1/mods/" + cf_id
         )
           .then((res) => res.json())
           .then((res) => {
             element.querySelectorAll(
               "div#" + element.id + " .card-text"
-            )[0].innerHTML = numberWithCommas(res.downloadCount) + " Downloads";
+            )[0].innerHTML = numberWithCommas(res.data.downloadCount) + " Downloads";
           });
         updatedDownloads = true;
       });
