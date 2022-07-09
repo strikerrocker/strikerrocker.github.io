@@ -23,6 +23,12 @@
       "name": "Limited Spawners",
       "cf_id": 410922,
       "link": "https://www.curseforge.com/minecraft/mc-mods/limited-spawners"
+    },
+    {
+      "slug": "clear-despawn",
+      "name": "Clear Despawn",
+      "cf_id": 308656,
+      "link": "https://www.curseforge.com/minecraft/mc-mods/clear-despawn"
     }
   ],
   "fabric": [
